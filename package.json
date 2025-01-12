@@ -4,9 +4,10 @@
   "description": "A static site for any conferences based on 11ty engine.",
   "author": "Meetings Ecosystem",
   "license": "GPL-3.0-only",
-  "type": "module",
   "version": "1.0.0",
   "scripts": {
+    "start": "eleventy --incremental --serve --quiet",
+    "build": "eleventy --quiet",
     "lint:editorconfig": "editorconfig-checker"
   },
   "devDependencies": {
