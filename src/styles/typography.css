@@ -1,0 +1,55 @@
+.caption {
+  font-family: var(--font-family-mono-bold);
+  font-weight: var(--caption-font-weight);
+  font-size: var(--caption-font-size);
+  line-height: var(--caption-line-height);
+}
+
+.input {
+  font-family: var(--font-family-mono-regular);
+  font-weight: var(--input-font-weight);
+  font-size: var(--input-font-size);
+  line-height: var(--input-line-height);
+}
+
+.title {
+  font-family: var(--font-family-mono-bold);
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-font-size);
+  line-height: var(--title-line-height);
+}
+
+.value {
+  font-family: var(--font-family-mono-light);
+  font-weight: var(--value-font-weight);
+  font-size: var(--value-font-size);
+  line-height: var(--value-line-height);
+}
+
+.text {
+  font-family: var(--font-family-regular);
+  font-weight: var(--text-font-weight);
+  font-size: var(--text-font-size);
+  line-height: var(--text-line-height);
+}
+
+.tag {
+  font-family: var(--font-family-mono-regular);
+  font-weight: var(--tag-font-weight);
+  font-size: var(--tag-font-size);
+  line-height: var(--tag-line-height);
+}
+
+.strong {
+  font-family: var(--font-family-semi-bold);
+  font-weight: var(--strong-font-weight);
+  font-size: var(--strong-font-size);
+  line-height: var(--strong-line-height);
+}
+
+.menu {
+  font-family: var(--font-family-mono-regular);
+  font-weight: var(--menu-font-weight);
+  font-size: var(--menu-font-size);
+  line-height: var(--menu-line-height);
+}
