@@ -7,9 +7,10 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "editorconfig": "editorconfig-checker"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "editorconfig-checker": "^6.0.1"
   }
 }
