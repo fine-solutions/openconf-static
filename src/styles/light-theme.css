@@ -1,0 +1,23 @@
+:root {
+  color-scheme: light;
+
+  /* Elements */
+  --color-primary: 0 1% 6%;
+  --color-text: 0 1% 6%;
+  --color-caption: 0 3% 97%;
+  --color-even: 0 3% 97%;
+  --color-accent: 193 97% 41%;
+  --color-background: 0 0% 100%;
+  --color-done: 113 100% 42%;
+  --color-in-progress: 40 100% 50%;
+  --color-assigned: 289 98% 78%;
+  --color-canceled: 9 99% 59%;
+  --color-disabled: 0 3% 79%;
+  --color-placeholder: 0 5% 79%;
+
+  /* Accents */
+  --color-blue-accent: 193 100% 50%;
+  --color-green-accent: 153 100% 50%;
+  --color-yellow-accent: 39 100% 56%;
+  --color-magenta-accent: 292 100% 74%;
+}
