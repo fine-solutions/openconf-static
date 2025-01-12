@@ -15,37 +15,37 @@
   "orientation": "natural",
   "icons": [
     {
-      "src": "/images/icons/96x96.png",
+      "src": "/images/logo/96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/images/icons/144x144.png",
+      "src": "/images/logo/144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/images/icons/180x180.png",
+      "src": "/images/logo/180x180.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/images/icons/192x192.png",
+      "src": "/images/logo/192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/images/icons/256x256.png",
+      "src": "/images/logo/256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/images/icons/512x512.png",
+      "src": "/images/logo/512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/images/icons/maskable.png",
+      "src": "/images/logo/maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
