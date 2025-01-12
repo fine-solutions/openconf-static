@@ -8,13 +8,15 @@
   "scripts": {
     "start": "eleventy --incremental --serve --quiet",
     "build": "eleventy --quiet",
-    "lint:editorconfig": "editorconfig-checker"
+    "lint:editorconfig": "editorconfig-checker",
+    "lint:eslint": "eslint '**/*.js'"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.4.7",
     "editorconfig-checker": "^6.0.1",
+    "eslint": "^9.18.0",
     "postcss": "^8.4.49",
     "postcss-csso": "^6.0.1",
     "postcss-import": "^16.1.0",
