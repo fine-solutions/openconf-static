@@ -1,8 +1,8 @@
-const postcss = require('postcss');
-const postcssImport = require('postcss-import');
-const postcssMediaMinmax = require('postcss-media-minmax');
-const autoprefixer = require('autoprefixer');
-const postcssCsso = require('postcss-csso');
+const postcss = require('postcss')
+const postcssImport = require('postcss-import')
+const postcssMediaMinmax = require('postcss-media-minmax')
+const autoprefixer = require('autoprefixer')
+const postcssCsso = require('postcss-csso')
 
 module.exports = function (config) {
   // Settings
