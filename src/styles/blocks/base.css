@@ -1,0 +1,23 @@
+.base {
+  font-size: var(--font-size, 100%);
+  line-height: var(--font-line-height, 1.25);
+  font-family: var(--font-family, sans-serif);
+  color: hsl(var(--color-text));
+  background-color: hsl(var(--color-background));
+  scroll-behavior: smooth;
+}
+
+.base__body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-block-size: 100dvh;
+  margin: 0;
+}
+
+/* .base__header {
+
+}
+
+.base__footer {
+
+} */

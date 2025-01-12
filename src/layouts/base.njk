@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html class="base font-theme" lang="en">
+  <head>
+    {% include 'meta.njk' %}
+  </head>
+  <body class="base__body">
+    {{ header('base__header') }}
+    {{ content | safe }}
+    {{ footer('base__footer') }}
+  </body>
+</html>
