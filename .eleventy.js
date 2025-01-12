@@ -1,8 +1,37 @@
+const postcss = require('postcss');
+const postcssImport = require('postcss-import');
+const postcssMediaMinmax = require('postcss-media-minmax');
+const autoprefixer = require('autoprefixer');
+const postcssCsso = require('postcss-csso');
+
 module.exports = function (config) {
   // Settings
   config.setDataDeepMerge(true)
 
   // Plugins
+  // Extensions
+  config.addExtension('css', {
+    outputFileExtension: 'css',
+    compile: async (content, path) => {
+      if (path !== './src/styles/index.css') {
+        return
+      }
+
+      return async () => {
+        let output = await postcss([
+          postcssImport,
+          postcssMediaMinmax,
+          autoprefixer,
+          postcssCsso,
+        ]).process(content, {
+          from: path,
+        })
+
+        return output.css
+      }
+    }
+  })
+
   // Collections
   // Libraries
   // NunjucksShortcodes
@@ -28,6 +57,6 @@ module.exports = function (config) {
     markdownTemplateEngine: false,
     htmlTemplateEngine: 'njk',
     passthroughFileCopy: true,
-    templateFormats: ['md', 'njk'],
+    templateFormats: ['md', 'njk', 'css'],
   }
 }
