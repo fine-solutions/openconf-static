@@ -7,7 +7,7 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "editorconfig": "editorconfig-checker"
+    "lint:editorconfig": "editorconfig-checker"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
