@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "openconf-static",
+  "description": "A static site for any conferences based on 11ty engine.",
+  "author": "Meetings Ecosystem",
+  "license": "GPL-3.0-only",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
