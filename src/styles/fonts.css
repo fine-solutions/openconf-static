@@ -43,10 +43,10 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: local('Roboto'),
-       url('/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
-       url('/fonts/Roboto/Roboto-Regular.woff') format('woff'),
-       url('/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+  src:  local('Roboto'),
+        url('/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('/fonts/Roboto/Roboto-Regular.woff') format('woff'),
+        url('/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -54,10 +54,10 @@
 
 @font-face {
   font-family: 'Roboto SemiBold';
-  src: local('Roboto SemiBold'),
-       url('/fonts/Roboto/Roboto-SemiBold.woff2') format('woff2'),
-       url('/fonts/Roboto/Roboto-SemiBold.woff') format('woff'),
-       url('/fonts/Roboto/Roboto-SemiBold.ttf') format('ttf');
+  src:  local('Roboto SemiBold'),
+        url('/fonts/Roboto/Roboto-SemiBold.woff2') format('woff2'),
+        url('/fonts/Roboto/Roboto-SemiBold.woff') format('woff'),
+        url('/fonts/Roboto/Roboto-SemiBold.ttf') format('ttf');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -65,10 +65,10 @@
 
 @font-face {
   font-family: 'Roboto Mono';
-  src: local('Roboto Mono'),
-       url('/fonts/Roboto/RobotoMono-Regular.woff2') format('woff2'),
-       url('/fonts/Roboto/RobotoMono-Regular.woff') format('woff'),
-       url('/fonts/Roboto/RobotoMono-Regular.ttf') format('ttf');
+  src:  local('Roboto Mono'),
+        url('/fonts/Roboto/RobotoMono-Regular.woff2') format('woff2'),
+        url('/fonts/Roboto/RobotoMono-Regular.woff') format('woff'),
+        url('/fonts/Roboto/RobotoMono-Regular.ttf') format('ttf');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -76,10 +76,10 @@
 
 @font-face {
   font-family: 'Roboto Mono Bold';
-  src: local('Roboto Mono Bold'),
-       url('/fonts/Roboto/RobotoMono-Bold.woff2') format('woff2'),
-       url('/fonts/Roboto/RobotoMono-Bold.woff') format('woff'),
-       url('/fonts/Roboto/RobotoMono-Bold.ttf') format('ttf');
+  src:  local('Roboto Mono Bold'),
+        url('/fonts/Roboto/RobotoMono-Bold.woff2') format('woff2'),
+        url('/fonts/Roboto/RobotoMono-Bold.woff') format('woff'),
+        url('/fonts/Roboto/RobotoMono-Bold.ttf') format('ttf');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -87,10 +87,10 @@
 
 @font-face {
   font-family: 'Roboto Mono Light';
-  src: local('Roboto Mono Light'),
-       url('/fonts/Roboto/RobotoMono-Light.woff2') format('woff2'),
-       url('/fonts/Roboto/RobotoMono-Light.woff') format('woff'),
-       url('/fonts/Roboto/RobotoMono-Light.ttf') format('ttf');
+  src:  local('Roboto Mono Light'),
+        url('/fonts/Roboto/RobotoMono-Light.woff2') format('woff2'),
+        url('/fonts/Roboto/RobotoMono-Light.woff') format('woff'),
+        url('/fonts/Roboto/RobotoMono-Light.ttf') format('ttf');
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
