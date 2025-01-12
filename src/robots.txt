@@ -1,0 +1,14 @@
+User-Agent: *
+Allow: /
+Disallow: /search
+
+User-agent: GoogleBot
+Allow: /
+Disallow: /search
+
+User-agent: Yandex
+Allow: /
+Disallow: /search
+Clean-param: q
+
+Sitemap: https://rlnc.ru/sitemap.xml
