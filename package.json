@@ -9,7 +9,8 @@
     "start": "eleventy --incremental --serve --quiet",
     "build": "eleventy --quiet",
     "lint:editorconfig": "editorconfig-checker",
-    "lint:eslint": "eslint '**/*.js'"
+    "lint:eslint": "eslint '**/*.js'",
+    "lint:stylelint": "stylelint 'src/styles/**/*.css'"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
@@ -20,6 +21,8 @@
     "postcss": "^8.4.49",
     "postcss-csso": "^6.0.1",
     "postcss-import": "^16.1.0",
-    "postcss-media-minmax": "^5.0.0"
+    "postcss-media-minmax": "^5.0.0",
+    "stylelint": "^16.13.0",
+    "stylelint-config-standard": "^37.0.0"
   }
 }
