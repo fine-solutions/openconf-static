@@ -1,4 +1,5 @@
 module.exports = function (config) {
+  // Settings
   config.setDataDeepMerge(true)
 
   // Plugins
