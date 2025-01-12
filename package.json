@@ -12,6 +12,12 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "editorconfig-checker": "^6.0.1"
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^16.4.7",
+    "editorconfig-checker": "^6.0.1",
+    "postcss": "^8.4.49",
+    "postcss-csso": "^6.0.1",
+    "postcss-import": "^16.1.0",
+    "postcss-media-minmax": "^5.0.0"
   }
 }
