@@ -6,6 +6,8 @@ const postcssCsso = require('postcss-csso')
 const htmlMin = require('html-minifier-terser')
 const { parseHTML } = require('linkedom')
 
+const constants = require('./config/constants.js')
+
 module.exports = function (config) {
   // Settings
   config.setDataDeepMerge(true)
@@ -89,11 +91,19 @@ module.exports = function (config) {
   })
 
   // PassthroughCopy
-  config.addPassthroughCopy('src/favicon.ico')
+  const faviconKey = `src/favicon-${constants.baseSuffix}.ico`
+  const faviconSetting = {}
+  faviconSetting[faviconKey] = 'favicon.ico'
+  const logosKey = `src/images/logo-${constants.baseSuffix}`
+  const logosSetting = {}
+  logosSetting[logosKey] = 'images/logo'
+  config.addPassthroughCopy(faviconSetting)
   config.addPassthroughCopy('src/manifest.json')
   config.addPassthroughCopy('src/robots.txt')
   config.addPassthroughCopy('src/fonts')
-  config.addPassthroughCopy('src/images')
+  config.addPassthroughCopy('src/images/icons')
+  config.addPassthroughCopy(logosSetting)
+  console.log(logosSetting)
 
   // Return
   return {
