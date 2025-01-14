@@ -7,27 +7,28 @@ const postcssCsso = require('postcss-csso')
 module.exports = function (config) {
   // Settings
   config.setDataDeepMerge(true)
+  config.addTemplateFormats('css')
 
   // Plugins
   // Extensions
   config.addExtension('css', {
     outputFileExtension: 'css',
     compile: async (content, path) => {
-      if (path !== './src/styles/index.css') {
+      if (![ './src/styles/index.css', './src/styles/dark-theme.css' ].includes(path)) {
         return
       }
 
-      return async () => {
-        let output = await postcss([
-          postcssImport,
-          postcssMediaMinmax,
-          autoprefixer,
-          postcssCsso,
-        ]).process(content, {
-          from: path,
-        })
+      const result = await postcss([
+        postcssImport,
+        postcssMediaMinmax,
+        autoprefixer,
+        postcssCsso,
+      ]).process(content, {
+        from: path,
+      })
 
-        return output.css
+      return async () => {
+        return result.css
       }
     }
   })
@@ -57,6 +58,6 @@ module.exports = function (config) {
     markdownTemplateEngine: false,
     htmlTemplateEngine: 'njk',
     passthroughFileCopy: true,
-    templateFormats: ['md', 'njk', 'css'],
+    templateFormats: ['md', 'njk'],
   }
 }
