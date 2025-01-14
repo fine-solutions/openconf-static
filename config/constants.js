@@ -2,10 +2,10 @@ require('dotenv').config({ path: '.env' })
 
 const DEFAULT_ENVS = {
   BASE_URL: "http://localhost:8080",
-  BASE_TITLE: "РЛНС",
-  BASE_DESCRIPTION: "Международная научно-техническая конференция «Радиолокация, навигация, связь»",
-  CONFERENCES: "2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025",
-  SERVER_PATH: "/web/sites/rlnc/www/",
+  BASE_TITLE: "OpenConf",
+  BASE_DESCRIPTION: "OpenConf Engine",
+  CONFERENCES: "2025",
+  SERVER_PATH: "/web/sites/openconf/www/",
   GITLAB_TOKEN: "",
 }
 
