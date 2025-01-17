@@ -1,14 +1,15 @@
-const postcss = require('postcss')
-const postcssImport = require('postcss-import')
-const postcssMediaMinmax = require('postcss-media-minmax')
-const autoprefixer = require('autoprefixer')
-const postcssCsso = require('postcss-csso')
-const htmlMin = require('html-minifier-terser')
-const { parseHTML } = require('linkedom')
+import eleventyVitePlugin from '@11ty/eleventy-plugin-vite'
+import path from 'path'
+import postcssImport from 'postcss-import'
+import postcssMediaMinmax from 'postcss-media-minmax'
+import autoprefixer from 'autoprefixer'
+import postcssCsso from 'postcss-csso'
+import htmlMin from 'html-minifier-terser'
+import { parseHTML } from 'linkedom'
 
-const constants = require('./config/constants.js')
+import constants from './config/constants.js'
 
-module.exports = function (config) {
+export default async function(config) {
   // Settings
   config.setDataDeepMerge(true)
   config.addTemplateFormats('css')

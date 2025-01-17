@@ -1,4 +1,5 @@
-require('dotenv').config({ path: '.env' })
+import dotenv from 'dotenv'
+dotenv.config()
 
 const DEFAULT_ENVS = {
   BASE_URL: 'http://localhost:8080',
@@ -14,7 +15,7 @@ function getEnv(envKey) {
   return process.env[envKey] || DEFAULT_ENVS[envKey]
 }
 
-module.exports = {
+export default {
   baseUrl: getEnv('BASE_URL'),
   baseTitle: getEnv('BASE_TITLE'),
   baseDescription: getEnv('BASE_DESCRIPTION'),

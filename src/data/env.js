@@ -1,3 +1,3 @@
-const env = require('../../config/env')
+import env from '../../config/env.js'
 
-module.exports = env
+export default env

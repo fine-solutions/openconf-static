@@ -1,5 +1,6 @@
 {
   "private": true,
+	"type": "module",
   "name": "openconf-static",
   "description": "A static site for any conferences based on 11ty engine.",
   "author": "Meetings Ecosystem",
