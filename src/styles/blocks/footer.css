@@ -9,11 +9,12 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
+  width: 100%;
 }
 
 @media (width >= 640px) {
   .footer__section:first-child {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: auto clamp(253px, calc(100% / 3), 351px);
   }
 }
 
