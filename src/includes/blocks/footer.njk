@@ -1,4 +1,43 @@
+{% macro footerLabel(label) %}
+  <h2 class="footer__label title">
+    {{ label }}
+  </h2>
+{% endmacro %}
+
+{% macro footerItem(label, url, hint) %}
+  <li class="footer__item">
+    <a class="footer__link text" href="{{ url }}" title="{{ hint }}">{{ label }}</a>
+  </li>
+{% endmacro %}
+
+{# footer #}
 {% macro footer(class, tag = 'footer') %}
   <footer class="footer {{ class if class }}">
+    <section class="footer__section">
+      <div class="footer__menu">
+        {{ footerLabel('Нужна помощь?') }}
+        <ul class="footer__list">
+          {{ footerItem('Часто задаваемые вопросы', '/questions/', 'Вы сможете найти ответ на список наиболее популярных вопросов от участников.') }}
+          {{ footerItem('info@rlnc.ru', 'mailto:info@rlnc.ru', 'Связаться с Оргкомитетом по электронной почте.') }}
+          {{ footerItem('+7 (910) 749-79-45', 'tel:+79107497945', 'Связаться с Оргкомитетом по телефону.') }}
+          {{ footerItem('+7 (952) 953-82-94', 'tel:+79529538294', 'Связаться с Оргкомитетом по телефону.') }}
+        </ul>
+      </div>
+
+      <div class="footer__menu">
+        {{ footerLabel('Мы в социальных сетях') }}
+        <ul class="footer__list">
+          {{ footerItem('Канал в Телеграм', 'https://t.me/rlncvrn', 'Вы можете перейти на официальный канал в Телеграм' ) }}
+          {{ footerItem('Группа в VK', 'https://vk.com/rlncru', 'Вы можете перейти в группу Вконтакте') }}
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer__section">
+      <p class="footer__copyright text">
+        <span>При использовании материалов ссылка на сайт обязательна</span>
+        <span>© Оргкомитет РЛНС, 2025</span>
+      </p>
+    </section>
   </footer>
 {% endmacro %}
