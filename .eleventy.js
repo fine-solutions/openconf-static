@@ -13,31 +13,54 @@ export default async function(config) {
   // Settings
   config.setDataDeepMerge(true)
   config.addTemplateFormats('css')
+  config.addWatchTarget('./src/styles/**/*.css')
 
   // Plugins
-  // Extensions
-  config.addExtension('css', {
-    outputFileExtension: 'css',
-    compile: async (content, path) => {
-      if (![ './src/styles/index.css', './src/styles/dark-theme.css' ].includes(path)) {
-        return
-      }
+  config.addPlugin(eleventyVitePlugin, {
+    showAllHosts: true,
 
-      const result = await postcss([
-        postcssImport,
-        postcssMediaMinmax,
-        autoprefixer,
-        postcssCsso,
-      ]).process(content, {
-        from: path,
-      })
+    serverOptions: {
+      liveReload: true,
+      domDiff: true,
+      port: 8080,
+      showAllHosts: false,
+      encoding: 'utf-8',
+      showVersion: false,
+    },
 
-      return async () => {
-        return result.css
-      }
-    }
+    viteOptions: {
+      clearScreen: false,
+      appType: 'mpa',
+
+      server: {
+        mode: 'development',
+        middlewareMode: true,
+      },
+
+      cacheDir: '.vite',
+
+      css: {
+        postcss: {
+          plugins: [
+            postcssImport,
+            postcssMediaMinmax,
+            autoprefixer,
+            postcssCsso({
+              restructure: false,
+            }),
+          ],
+        },
+      },
+
+      resolve: {
+        alias: {
+          '/styles': path.resolve('.', 'src/styles'),
+        },
+      },
+    },
   })
 
+  // Extensions
   // Collections
   // Libraries
   // NunjucksShortcodes
@@ -104,7 +127,6 @@ export default async function(config) {
   config.addPassthroughCopy('src/fonts')
   config.addPassthroughCopy('src/images/icons')
   config.addPassthroughCopy(logosSetting)
-  console.log(logosSetting)
 
   // Return
   return {
