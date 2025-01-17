@@ -5,6 +5,7 @@
 
 /* Blocks */
 @import url('./blocks/base.css');
+@import url('./blocks/footer.css');
 
 /* Views */
 @import url(./views/index.css);
