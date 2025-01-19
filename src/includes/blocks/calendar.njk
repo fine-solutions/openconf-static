@@ -1,0 +1,73 @@
+{% set lableCalendar = 'Календарь' %}
+{% set lableDocument = 'Документы' %}
+
+{% 
+  set itemsCalendar = [
+    {title: '1 февраля — 10 марта', text: 'Регистрация авторов и прием докладов на сайте конференции'}, 
+    {title: '1 апреля — 10 апреля', text: 'Регистрация участников на сайте конференции'}, 
+    {title: '15 апреля — 17 апреля', text: 'Работа секций конференции'}
+  ]
+%}
+{% 
+  set itemsDocument = [
+    {title: 'Оргкоммитет', url: '', hint: 'Можете скачать документ'}, 
+    {title: 'Информационное письмо (.pdf)', url: '', hint: 'Можете скачать документ'}, 
+    {title: 'Шаблоны оформления', url: '', hint: 'Можете скачать документ'}, 
+    {title: 'Программа', url: '', hint: 'Можете скачать документ'}, 
+    {title: 'Сборник трудов', url: '', hint: 'Можете скачать документ'}, 
+    {title: 'Лучшие доклады на секциях', url: '', hint: 'Можете скачать документ'}
+  ]
+%}
+
+{% macro label(label) %}
+  <h2 class="calendar__label title">
+    {{ label }}
+  </h2>
+{% endmacro %}
+
+{% macro calendarItem(title, text) %}
+  <li class="calendar__item">
+    <section class="calendar__section">
+      <h3 class="calendar__title title">
+        {{ title }}
+      </h3> 
+      <p class="text"> 
+        {{ text }}
+      </p>
+    </section>
+  </li>
+{% endmacro %}
+
+{% macro documentItem(title, url, hint) %}
+  <li class="document__item">
+    <a class="strong" href="{{ url }}" title="{{ hint }}">{{ title }}</a>
+  </li>
+{% endmacro %}
+
+
+{# block #}
+{%  macro calendar(class, tag = 'calendar') %}
+  <div class="calendar {{ class if class }}">
+    <section class="calendar__section">
+      {{ label(lableCalendar) }}
+      <div class="calendar__menu">
+        <ul class="calendar__list">
+          {% for item in itemsCalendar %}
+            {{ calendarItem(item.title, item.text) }}
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="document__section">
+      {{ label(lableDocument) }}
+      <div class="document__menu">
+        <ul class="document__list">
+          {% for item in itemsDocument %}
+            {{ documentItem(item.title, item.url, item.hint) }}
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  </div>
+{% endmacro %}
