@@ -1,0 +1,6 @@
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid hsl(var(--color-accent));
+}
