@@ -1,0 +1,57 @@
+{% from "blocks/button.njk" import button with context %}
+
+{% set lable = 'Спикеры' %}
+{% 
+  set items = [
+    {title: 'Иванов Петр Сидорович', url: '/', hint: 'Перейти на доклад', image: '/images/blocks'},
+    {title: 'Петров Петр Сидорович', url: '/', hint: 'Перейти на доклад', image: '/images/blocks'},
+    {title: 'Сидоров Петр Сидорович', url: '/', hint: 'Перейти на доклад', image: '/images/blocks'}
+  ]
+%}
+
+{% macro label(label) %}
+  <h2 class="speaker__label title">
+    {{ label }}
+  </h2>
+{% endmacro %}
+
+{% macro speakerItem(title, url, hint, image) %}
+  <li class="speaker__item">
+    <div class="speaker__image" aria-hidden="true">
+      <img src="{{ image }}" alt="фото">
+    </div>
+    <div class="speaker__information">
+      <div class="caption">{{ title}}</div>
+      <div class="speaker__link ">  
+        <a class="tag" href="{{ url }}" title="{{ hint }}">Пленарный доклад</a>
+      </div>
+    </div>
+  </li>
+{% endmacro %}
+
+
+
+{# block #}
+{%  macro speaker(class, tag = 'speaker') %}
+  <div class="speaker {{ class if class }}">
+    <section class="speaker__section">
+      {{ label(lable) }}
+      <div class="speaker__menu">
+        <ul class="speaker__list">
+          {% for item in items %}
+            {{ speakerItem(item.title, item.url, item.hint, item.image) }}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="speaker__button">  
+        {{ button('Показать еще', '/', 'Вы можете посмотреть полный список новостей' )}}
+      </div>
+      <div class="speaker__pagination">  
+        <span>1</span>  
+        <span>2</span>  
+        <span>3</span>  
+      </div>
+    </section>
+  </div>
+{% endmacro %}
