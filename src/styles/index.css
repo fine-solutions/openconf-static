@@ -6,6 +6,16 @@
 /* Blocks */
 @import url('./blocks/base.css');
 @import url('./blocks/footer.css');
+@import url('./blocks/banner.css');
+@import url('./blocks/button.css');
+@import url('./blocks/news.css');
+@import url('./blocks/tag.css');
+@import url('./blocks/calendar.css');
+@import url('./blocks/section.css');
+@import url('./blocks/speaker.css');
+@import url('./blocks/placement.css');
+@import url('./blocks/archive.css');
+@import url('./blocks/partner.css');
 
 /* Views */
 @import url(./views/index.css);
