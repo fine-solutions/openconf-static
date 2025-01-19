@@ -1,0 +1,29 @@
+{% set lablePartner = 'Партнеры' %}
+{% set items = [
+    {title: 'ВГУ', url: '/', hint: 'Перейти к партнеру', image: '/images/partner/p1.png'},
+    {title: 'ПИШ', url: '/', hint: 'Перейти к партнеру', image: '/images/partner/p2.png'},
+    {title: 'СК', url: '/', hint: 'Перейти к партнеру', image: '/images/partner/p3.png'}
+  ] 
+%}
+
+{% macro label(label) %}
+  <h2 class="partner__label title">
+    {{ label }}
+  </h2>
+{% endmacro %}
+
+{# Block #}
+{% macro partner(class, tag = 'partner') %}
+  <div class="partner {{ class if class }}">
+    <section class="partner__section">
+      {{ label(lablePartner) }}
+
+      <div class="partner__logo">
+        {% for item in items %}
+          <div class="partner__image" aria-hidden="true">
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+          </div>
+        {% endfor %}
+    </section>
+  </div>
+{% endmacro %}
