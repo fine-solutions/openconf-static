@@ -1,0 +1,17 @@
+.archive {
+  padding: 20px 25px;
+  width: 320px;
+}
+
+.archive__date {
+  display: grid;
+  grid-template-columns: repeat(10, 22px);
+  gap: 10px;
+}
+
+@media (width >= 640px) {
+  .archive {
+    width: 364px;
+  }
+}
+ 
