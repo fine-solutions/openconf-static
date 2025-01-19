@@ -1,0 +1,137 @@
+/* .banner {
+
+} */
+
+.banner__main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: hsl(var(--color-blue-accent));
+}
+
+.banner__image {
+	background-color: hsl(var(--color-even));
+	flex-grow: 1;
+}
+
+.banner__image__hidden {
+	display: none;
+}
+
+.banner__section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  padding: 10px;
+}
+
+.banner__title {
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+	height: 204;
+	padding: 15px;
+	padding-bottom: 10px;
+}
+
+.banner__title__size {
+  font-size: 50px;
+	font-weight: var(--caption-font-weight);
+	line-height: 70px;
+	margin: 0px 0px ;
+}
+
+.banner__label__size {
+  font-size: 24px;
+	font-weight: var(--caption-font-weight);
+	line-height: 30px;
+	margin: 0px 0px ;
+  width: 173px;
+}
+
+.banner__label {
+	margin: 0px;
+	width: 147px;
+	height: 80px;
+  overflow: hidden;
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+	font-size: var(--caption-font-size);
+}
+
+.banner__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 120px;
+}
+
+.banner__section__width {
+	width: 220px;
+}
+.banner__section__width-max {
+	width: 331px;
+}
+
+.banner__item:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+.banner__item:nth-child(1) {
+	background-color: hsl(var(--color-green-accent));
+}
+.banner__item:nth-child(2) {
+	background-color: hsl(var(--color-yellow-accent));
+}
+.banner__item:nth-child(3) {
+	background-color: hsl(var(--color-magenta-accent));
+}
+
+.banner__information {
+	height: 166px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 20px;
+	padding: 0px 15px;
+}
+
+@media (width >= 640px) {
+  .banner__information {
+    height: 130px
+  }
+	.banner__image__hidden {
+		display: block;
+	}
+	.banner__item {
+		width: 100%;
+		height: 260px;
+	}
+	.banner__label {
+		width: 100%;
+		overflow: visible;
+	  white-space: wrap; 
+		font-size: var(--title-font-size);
+	}
+	.banner__section__width {
+		width: 301px;
+		padding: 25px;
+	}
+}
+
+.banner__description {
+  margin: 0;
+}
+
+.banner__list {
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.banner__link {
+	display: inline-block;
+	margin-top: auto;
+	border: 1px solid hsl(var(--color-primary)) ;
+	padding: 2px 4px;
+	text-decoration: none;
+}

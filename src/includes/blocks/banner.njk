@@ -1,0 +1,73 @@
+{% from "blocks/button.njk" import button with context %}
+
+{% set titleBanner = 'RLNC*2025' %}
+{% 
+  set items = [
+    { label: 'Некоторые значимые достижения российских ученых в области информационных технологий', url: '/1', hint: 'Описание', image: 'images/banners/d1.png' }, 
+    { label: 'Основные направления устойчивого развития предприятий радиоэлектронного комплекса в 2020–2030 годы', url: '/1', hint: 'Описание', image: '/images/banners/d2.png' },
+    { label: 'Фракталы, метаповерхности, системы РСА и MIMO: перспективы развития и стратегия технологий', url: '/1', hint: 'Описание', image: '/images/banners/d3.png' }
+  ] 
+%}
+
+{% macro bannerMain(title, label, url, hint, image) %}
+  <div class="banner__main">
+    <div class="banner__image banner__image__hidden" aria-hidden="true">
+      <img src="{{ image }}" alt="Основной баннер">
+    </div>
+
+    <section class="banner__section banner__section__width-max">
+      <section class="banner__title">
+        <h1 class="banner__title__size">
+          {{ title }}
+        </h1>
+        <h2 class="banner__label__size title">
+          {{ label }}
+        </h2>
+      </section>
+
+      <section class="banner__information">
+        <p class="banner__description caption">
+          <span>XXXI Международная </br> научно-техническая конференция</span>
+        </p>
+        <p class="banner__description caption">
+          <span>г. Воронеж</span>
+        </p>
+        <div class="banner__button">  
+          {{ button('Подать доклад', '/', 'Вы можете подать свой доклад на конференцию' )}}
+        </div>
+      </section>
+    </section>
+  </div>
+{% endmacro %}
+
+{% macro bannerItem(label, url, hint, image) %}
+  <li class="banner__item">
+    <div class="banner__image" aria-hidden="true">
+      <img :src="{{ image }}" alt="Баннер доклада">
+    </div>
+
+    <section class="banner__section banner__section__width">
+      <h3 class="banner__label ">
+        {{ label }}
+      </h3>
+      <div class="banner__button">  
+        <a class="banner__link tag" href="{{ url }}" title="{{ hint }}">Пленарный доклад</a>
+      </div>
+    </section>
+  </li>
+{% endmacro %}
+
+{# block #}
+{% macro banner(class, tag = 'banner') %}
+  <div class="banner {{ class if class }}">
+    {{ bannerMain(titleBanner, 'Радиолокация Навигация Связь', '/images/banners/main.png' , 'Вы можете подать свой доклад на конференцию', 'images/banners/main.png' ) }}
+
+    <div class="banner__menu ">
+      <ul class="banner__list">
+        {% for item in items %}
+          {{ bannerItem(item.label, item.url, item.hint, item.image) }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
