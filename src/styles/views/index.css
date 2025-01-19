@@ -5,3 +5,27 @@
 .index__title {
   display: block;
 }
+
+.index__news {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+.index__section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+@media (width >= 640px) {
+  .index__news {
+    flex-direction: row-reverse;
+  }
+  .index__section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

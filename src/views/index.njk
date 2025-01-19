@@ -1,3 +1,30 @@
+{% from "blocks/banner.njk" import banner with context %}
+{% from "blocks/news.njk" import news with context %}
+{% from "blocks/calendar.njk" import calendar with context %}
+{% from "blocks/section.njk" import section with context %}
+{% from "blocks/speaker.njk" import speaker with context %}
+{% from "blocks/placement.njk" import placement with context %}
+{% from "blocks/archive.njk" import archive with context %}
+{% from "blocks/partner.njk" import partner with context %}
+
 <main class="index">
   <h1 class="index__title">Hello World!</h1>
+  <section class="index__banner">
+    {{ banner('banner__test') }}
+  </section>
+  <section class="index__news">
+    {{ calendar() }}
+    {{ news() }}
+  </section>
+  <section class="index__section">
+    {{ section() }}
+    {{ speaker() }}
+  </section>
+  <section class="index__section">
+    {{ placement() }}
+    {{ archive() }}
+  </section>
+  <section class="index__section">
+    {{ partner() }}
+  </section>
 </main>
