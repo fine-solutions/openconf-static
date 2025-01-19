@@ -126,6 +126,8 @@ export default async function(config) {
   config.addPassthroughCopy('src/robots.txt')
   config.addPassthroughCopy('src/fonts')
   config.addPassthroughCopy('src/images/icons')
+  config.addPassthroughCopy('src/images/banners');
+  config.addPassthroughCopy('src/images/partners');
   config.addPassthroughCopy(logosSetting)
 
   // Return
