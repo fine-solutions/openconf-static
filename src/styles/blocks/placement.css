@@ -1,0 +1,33 @@
+.placement {
+  padding: 20px 14px;
+}
+
+.placement__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.placement__item {
+  padding: 12px; 
+}
+
+.placement__item:nth-child(even) {
+  background-color: hsl(var(--color-even));
+}
+
+.placement__information {
+  overflow: hidden;
+  height: 31px;
+  padding: 0px;
+  margin: 5px 0px;
+  /* overflow: hidden;
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+  width: clamp(268px, 607px); */
+  /* To-DO стилизовать троеточие */
+}
+
+.placement__price {
+
+}
