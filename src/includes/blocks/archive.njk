@@ -1,0 +1,24 @@
+{% set lableArchive = 'Архив' %}
+{% set items = [30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20,19] %}
+
+{% macro label(label) %}
+  <h2 class="placement__label title">
+    {{ label }}
+  </h2>
+{% endmacro %}
+
+{# Block #}
+{% macro archive(class, tag = 'archive') %}
+  <div class="archive {{ class if class }}">
+    <section class="archive__section">
+      {{ label(lableArchive) }}
+
+      <div class="archive__date">
+        {% for item in items %}
+          <span class="strong">
+            {{ item }}
+          </span>
+        {% endfor %}
+    </section>
+  </div>
+{% endmacro %}
