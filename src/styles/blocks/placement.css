@@ -1,33 +1,24 @@
 .placement {
-  padding: 20px 14px;
+  padding: 12px;
 }
 
-.placement__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.placement__item {
-  padding: 12px; 
-}
-
-.placement__item:nth-child(even) {
+.placement:nth-child(even) {
   background-color: hsl(var(--color-even));
+}
+
+.placement__date {
+  color: hsl(var(--color-caption));
 }
 
 .placement__information {
   overflow: hidden;
-  height: 31px;
+  height: 42px;
   padding: 0px;
-  margin: 5px 0px;
-  /* overflow: hidden;
-	white-space: nowrap; 
-	text-overflow: ellipsis;
-  width: clamp(268px, 607px); */
-  /* To-DO стилизовать троеточие */
-}
-
-.placement__price {
-
+  margin: 5px 0px 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-width: 268px;
 }
