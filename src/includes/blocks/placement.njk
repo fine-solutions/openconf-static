@@ -1,45 +1,13 @@
-{% set lablePlacement = 'Размещение' %}
-{% 
-  set items = [
-    {title: 'Benefit Plaza', text: 'Скидка на все категории номеров 15%. В стоимость включены: завтрак «шведский стол», Интернет, пользование тренажерным залом. К услугам гостей 173 просторных комфортабельных номера. Отель гарантирует безопасность и комфортабельный', url: '/placement', hint: 'Перейти на страницу для размещения', price: 3750},
-    {title: 'Degas', text: 'Завтрак «Шведский стол» включен в стоимость проживания. Стоимость дополнительного завтрака 700 руб/чел.', url: '/placement', hint: 'Перейти на страницу для размещения', price: 4500}
-  ]
-%}
-
-{% macro label(label) %}
-  <h2 class="placement__label title">
-    {{ label }}
-  </h2>
-{% endmacro %}
-
-{% macro placementItem(title, text, url, hint, price) %}
-  <li class="placement__item">
-    <section class="placement__section">
-      <div class="placement__title strong">
-        <span>{{ title }}</span>
-      </div>
-      <p class="placement__information text">
-        <span>{{ text }}</span>
-      </p>
-      <div class="placement__price tag">
-        <span>от {{ price }} р.</span>
-      </div>
-    </section>
-  </li>
-{% endmacro %}
-
-{# Block #}
-{% macro placement(class, tag = 'placement') %}
-  <div class="placement {{ class if class }}">
-    <section class="placement__section">
-      {{ label(lablePlacement) }}
-      <div class="placement__menu">
-        <ul class="placement__list">
-          {% for item in items %}
-            {{ placementItem(item.title, item.text, item.url, item.hint, item.price) }}
-          {% endfor %}
-        </ul>
-      </div>
-    </section>
-  </div>
+{% macro placement(title, text, price) %}
+  <article class="placement">
+    <div class="placement__title strong">
+       {{ title }}
+    </div>
+    <p class="placement__information text">
+      {{ text }}
+    </p>
+    <div class="placement__price tag">
+      от {{ price }} р.
+    </div>
+  </article>
 {% endmacro %}
