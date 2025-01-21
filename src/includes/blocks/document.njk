@@ -1,0 +1,11 @@
+{% macro document(items) %}
+  <section class="document">
+    <ul class="document__list">
+      {% for item in  items %}
+        <li class="document__item">
+          <a class="document__link {% if item.disabled %} disabled {% endif %} strong" href="{{ item.url }}" title="{{ item.hint }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endmacro %}
