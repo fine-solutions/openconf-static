@@ -1,78 +1,17 @@
 {% from "blocks/tag.njk" import tag with context %}
-{% from "blocks/button.njk" import button with context %}
 
-{% set lableNews = 'Новости' %}
-{% 
-  set items = [{
-    text: 'Открыта регистрация участников очных и онлайн секций XXX международной научно-технической конференции «Радиолокация, навигация, связь».',
-    time: '1 час назад',
-    tags: [{label: 'Регистрация'}, {label: 'Важно'}]
-  }, {
-    text: 'Приём докладов продлится до 10 марта (воскресенье).',
-    time: '1 час назад',
-    tags: [{label: 'Сроки'}, {label: 'Важно'}]
-  }, {
-    text: 'Открыт приём докладов на XXX международную научно-техническую конференцию «Радиолокация, навигация, связь» (RLNC*2024).',
-    time: '1 час назад',
-    tags: [{label: 'Сроки'}, {label: 'Важно'}]
-  }, {
-    text: 'Приём докладов продлится до 10 марта (воскресенье).',
-    time: '1 час назад',
-    tags: [{label: 'Сроки'}, {label: 'Важно'}]
-  },
-  {
-    text: 'Еще новость для пагинации',
-    time: '2 час назад',
-    tags: [{label: 'Тест'}, {label: 'Важно'}]
-  }]
-%}
-
-{% macro newsLabel(label) %}
-  <h2 class="news__label title">
-    {{ label }}
-  </h2>
-{% endmacro %}
-
-{% macro newsItem(text, time, tags) %}
-  <li class="news__item">
-    <section class="news__section">
-      <div class="news__date tag">
-        <span>{{ time }}</span>
-      </div>
-
-      <p class="news__information text">
-        <span>{{ text }}</span>
-      </p>
-
-      <div class="news__tags">
-        {% for item in tags %}
-          {{ tag(item.label)}}
-        {% endfor %}
-      </div>
-
-    </section>
-  </li>
-{% endmacro %}
-
-{% macro news(class, tag = 'news') %}
-  <div class="news {{ class if class }}">
-    <section class="news__section">
-      {{ newsLabel(lableNews) }}
-      <div class="news__menu">
-        <ul class="news__list">
-          {% for item in items %}
-            {{ newsItem(item.text, item.time, item.tags) }}
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="news__button">  
-        {{ button('Показать еще', '/', 'Вы можете посмотреть полный список новостей' )}}
-      </div>
-      <div class="news__pagination">  
-        <span>1</span>  
-        <span>2</span>  
-        <span>3</span>  
-      </div>
-    </section>
-  </div>
+{% macro news(title, time, tags) %}
+  <article class="news">
+    <div class="news__date tag">
+       {{ time }}
+    </div>
+    <p class="news__information text">
+      {{ title }}
+    </p>
+    <div class="news__tags">
+      {% for item in tags %}
+        {{ tag(item.label)}}
+      {% endfor %}
+    </div>
+  </article>
 {% endmacro %}
