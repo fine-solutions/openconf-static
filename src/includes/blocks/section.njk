@@ -1,52 +1,6 @@
-{% set lable = 'Секции' %}
-{% 
-  set items = [
-    {text: 'Общие проблемы передачи и обработки информации. Цифровая обработка сигналов.'}, 
-    {text: 'Распознавание и обработка изображений.'}, 
-    {text: ' Системы связи и передачи данных. Мобильная связь. Спутниковые системы связи и передачи информации.'}, 
-    {text: 'Тепловые, лазерно-оптические системы наблюдения и связи'}, 
-    {text: 'Радиолокация. Радиолокационные системы с синтезированной апертурой. Авиационно-космические радиоэлектронные системы.'}, 
-    {text: 'Навигация. Позиционирование. Морская локация и навигация. Гидроакустика. Системы наведения.'}, 
-    {text: 'Сверхширокополосные радиоэлектронные системы. Теория фракталов.'}, 
-    {text: 'Электродинамика, распространение радиоволн, антенны. Цифровые антенные решетки и технология MIMO.'}, 
-    {text: 'Помехи. Электромагнитная совместимость. Радио- и оптоэлектронная разведка и подавление.'}, 
-    {text: 'Радиотехнические устройства. Автоматизированные измерительные комплексы. Электроника. Техника СВЧ.'}, 
-    {text: 'Радиотехнический мониторинг Земли.'}, 
-    {text: 'Интеллектуальные системы управления и связи. Когнитивное радио.'}
-  ]
-%}
-
-{% macro label(label) %}
-  <h2 class="section__label title">
-    {{ label }}
-  </h2>
-{% endmacro %}
-
-
-{% macro sectionItem(text) %}
-  <li class="section__item text">
-    {{ text }}
-  </li>
-{% endmacro %}
-
-{# block #}
-{% macro section(class, tag = 'section') %}
-  <div class="section {{ class if class }}">
-    <section class="section__section">
-      {{ label(lable) }}
-      
-      <div class="section__menu">
-        <h3 class="caption">
-        <span>
-          Пленарное заседание
-        </span>
-      </h3>
-        <ol class="section__list">
-          {% for item in items %}
-            {{ sectionItem(item.text) }}
-          {% endfor %}
-        </ol>
-      </div>
-    </section>
-  </div>
+{% macro section(title, description) %}
+  <article class="section text">
+    <span class="section__title">{{ title }}</span>
+    <span class="section__description">{{ description }}</span>
+  </article>
 {% endmacro %}
