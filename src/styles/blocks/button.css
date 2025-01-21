@@ -1,6 +1,7 @@
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: white;
-  border: 1px solid hsl(var(--color-accent));
+  background-color:  hsl(var(--color-background));
+  border-color:  hsl(var(--color-text));
+  cursor: pointer;
 }
