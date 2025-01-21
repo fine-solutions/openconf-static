@@ -16,6 +16,7 @@
 @import url('./blocks/placement.css');
 @import url('./blocks/archive.css');
 @import url('./blocks/partner.css');
+@import url('./blocks/document.css');
 
 /* Views */
 @import url(./views/index.css);
