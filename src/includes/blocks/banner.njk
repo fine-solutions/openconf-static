@@ -6,8 +6,8 @@
     {% if isMainBanner %}
      <div class="banner__image banner__image__hidden">
         <picture>
-          <source srcset="">
-          <img  src="/images" alt="Тут будет картинка">
+          <source srcset="item.image">
+          <img src="{{ item.image }}" alt="Тут будет картинка">
         </picture>
       </div>
       <div class="banner__main">
@@ -30,9 +30,10 @@
     {% else %}
       <div class="banner__image">
         <picture>
-          <source srcset="/images">
-          <img  src="/images" alt="Тут будет картинка">
+          <source srcset="{{ item.image }}">
+          <img src="{{ item.image }}" alt="Тут будет картинка">
         </picture>
+        {{ item.image}}
       </div>
       <div class="banner__default">
         <p class="banner__label">
