@@ -1,5 +1,11 @@
-{% macro tag(label) %}
-  <div class="tag__item tag">
-    <span># {{ label }}</span>
-  </div> 
+{% macro tag(label, isNews=false) %}
+  {% if isMainBanner %}
+    <div class="tag__item tag">
+      <span># {{ label }}</span>
+    </div> 
+  {% else %}
+    <div class="tag__item tag__border tag">
+      <span>{{ label }}</span>
+    </div> 
+  {% endif %}
 {% endmacro %}
