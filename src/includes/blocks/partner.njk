@@ -1,8 +1,8 @@
-{% macro partner(image, title) %}
+{% macro partner(item) %}
   <article class="partner">
     <picture>
-      <source srcset="{{ image }}">
-      <img width="270" height="83" src="{{ image }}" alt="{{ title }}">
+      <source srcset="{{ item.image }}">
+      <img width="270" height="83" src="{{ item.image }}" alt="{{ item.title }}">
     </picture>
   </article>
 {% endmacro %}
