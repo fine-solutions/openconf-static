@@ -1,6 +1,6 @@
-{% macro section(title, description) %}
+{% macro section(item) %}
   <article class="section text">
-    <span class="section__title">{{ title }}</span>
-    <span class="section__description">{{ description }}</span>
+    <span class="section__title">{{ item.title }}</span>
+    <span class="section__description">{{ item.description }}</span>
   </article>
 {% endmacro %}

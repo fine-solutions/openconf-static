@@ -1,8 +1,16 @@
-/* .section {
-
-} */
+.section {
+  width: 270px;
+}
 
 .section__title {
   font-weight: 700;
-  white-space: nowrap;
+}
+
+.section__description {
+}
+
+@media (width >= 640px) {
+  .section {
+    width: 100%;
+  }
 }
