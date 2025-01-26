@@ -1,18 +1,16 @@
 .news {
   padding: 12px;
-
 }
 
-.news:nth-child(even) {
+.news:nth-child(odd) {
   background-color: hsl(var(--color-even));
 }
 
 .news__date {
-  color: hsl(var(--color-caption));
+  color: hsl(var(--color-placeholder));
 }
 
 .news__information {
-  overflow: hidden;
   height: 31px;
   padding: 0px;
   margin: 5px 0px 10px;
@@ -20,8 +18,7 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-width: 268px;
+  width: 268px;
 }
 
 .news__tags {
@@ -31,4 +28,10 @@
   justify-content: start;
   gap: 5px;
   flex-wrap: wrap;
+}
+
+@media (width >= 640px) {
+  .news__information {
+    width: calc(100% - 20px);
+  }
 }

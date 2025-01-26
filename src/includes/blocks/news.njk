@@ -1,16 +1,16 @@
 {% from "blocks/tag.njk" import tag with context %}
 
-{% macro news(title, time, tags) %}
+{% macro news(item) %}
   <article class="news">
     <div class="news__date tag">
-       {{ time }}
+       {{ item.time }}
     </div>
     <p class="news__information text">
-      {{ title }}
+      {{ item.text }}
     </p>
     <div class="news__tags">
-      {% for item in tags %}
-        {{ tag(item.label, true)}}
+      {% for tg in item.tags %}
+        {{ tag(tg.label, true)}}
       {% endfor %}
     </div>
   </article>
