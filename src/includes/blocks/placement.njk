@@ -1,13 +1,13 @@
-{% macro placement(title, text, price) %}
+{% macro placement(item) %}
   <article class="placement">
     <div class="placement__title strong">
-       {{ title }}
+       {{ item.title }}
     </div>
     <p class="placement__information text">
-      {{ text }}
+      {{ item.text }}
     </p>
     <div class="placement__price tag">
-      от {{ price }} р.
+      от {{ item.price }} р.
     </div>
   </article>
 {% endmacro %}
