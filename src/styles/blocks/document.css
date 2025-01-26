@@ -1,6 +1,5 @@
- 
+
 .document {
-  border: 1px solid green
 }
 
 .document__list {
@@ -10,14 +9,15 @@
   gap: 10px;
   width: 280px;
   list-style-type: none;
+  padding-left: 0px;
 }
-  
+
 .document__link {
   text-decoration:none;
   color: inherit;
 }
-  
+
 .disabled {
   color: hsl(var(--color-disabled));
 }
-  
+
