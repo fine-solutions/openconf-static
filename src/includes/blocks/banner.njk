@@ -6,7 +6,7 @@
     {% if isMainBanner %}
      <div class="banner__image banner__image__hidden">
         <picture>
-          <source srcset="item.image">
+          <source srcset="{{item.image}}">
           <img src="{{ item.image }}" alt="Тут будет картинка">
         </picture>
       </div>
@@ -23,7 +23,7 @@
         <span class="caption">
          г. Воронеж
         </span>
-        <div class="banner__button">  
+        <div class="banner__button">
           {{ button('Подать доклад', '/', 'Вы можете подать свой доклад на конференцию' )}}
         </div>
       <div>
@@ -33,7 +33,6 @@
           <source srcset="{{ item.image }}">
           <img src="{{ item.image }}" alt="Тут будет картинка">
         </picture>
-        {{ item.image}}
       </div>
       <div class="banner__default">
         <p class="banner__label">
@@ -44,5 +43,5 @@
         </div>
       </div>
     {% endif %}
-  </section> 
+  </section>
 {% endmacro %}
