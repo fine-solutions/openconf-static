@@ -20,3 +20,9 @@
   align-items: start;
   gap: 10px;
 }
+
+@media (width >= 640px) {
+  .speaker {
+    width: 314px;
+  }
+}

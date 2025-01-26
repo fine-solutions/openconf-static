@@ -1,13 +1,13 @@
 {% from "blocks/tag.njk" import tag with context %}
 
-{%  macro speaker(title, image, tagName) %}
+{%  macro speaker(item) %}
   <article class="speaker">
     <div class="speaker__image" aria-hidden="true">
-      <img height="60" width="60" src="{{ image }}" alt="фото">
+      <img height="60" width="60" src="{{ item.image }}" alt="фото">
     </div>
     <div class="speaker__information">
-      <div class="caption">{{ title }}</div>
-      {{ tag(tagName) }}
+      <div class="caption">{{ item.title }}</div>
+      {{ tag(item.tag) }}
     </div>
   </article>
 {% endmacro %}
