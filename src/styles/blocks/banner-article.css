@@ -1,4 +1,4 @@
-.banner {
+.banner-article {
   --line-count: 4;
   --multiplicator: 0.5;
 	display: flex;
@@ -7,7 +7,7 @@
   height: 37.5vw;
 }
 
-.banner__aside {
+.banner-article__aside {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -15,38 +15,38 @@
   box-sizing: border-box;
 }
 
-.banner__link {
+.banner-article__link {
   color: hsl(var(--color-text));
   text-decoration: none;
 }
 
-.banner:nth-child(even) {
+.banner-article:nth-child(even) {
   flex-direction: row;
 }
 
-.banner:nth-child(odd) {
+.banner-article:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
-.banner:nth-child(1n) {
+.banner-article:nth-child(1n) {
 	background-color: hsl(var(--color-green-accent));
 }
-.banner:nth-child(2n) {
+.banner-article:nth-child(2n) {
 	background-color: hsl(var(--color-magenta-accent));
 }
-.banner:nth-child(3n) {
+.banner-article:nth-child(3n) {
 	background-color: hsl(var(--color-yellow-accent));
 }
-.banner:nth-child(4n) {
+.banner-article:nth-child(4n) {
 	background-color: hsl(var(--color-blue-accent));
 }
 
-.banner__image {
+.banner-article__image {
   width: 31.25vw;
   height: auto;
 }
 
-.banner__label {
+.banner-article__label {
   margin: 0;
   padding: 0;
 	overflow: hidden;
@@ -59,72 +59,72 @@
 }
 
 @media (min-width: 320px) {
-  .banner {
+  .banner-article {
     --multiplicator: 0.6;
   }
 
-  .banner__aside {
+  .banner-article__aside {
     width: 68.75vw;
   }
 }
 
 @media (min-width: 350px) {
-  .banner {
+  .banner-article {
     --multiplicator: 0.7;
   }
 }
 
 @media (min-width: 424px) {
-  .banner {
+  .banner-article {
     --multiplicator: 0.8;
   }
 }
 
 @media (min-width: 640px) {
-  .banner {
+  .banner-article {
     --multiplicator: 1;
     --line-count: 3;
     height: 25.390625vw;
   }
 
-  .banner__aside {
+  .banner-article__aside {
     width: 34.27734375vw;
     padding: 25px;
   }
 
-  .banner__image {
+  .banner-article__image {
     width: 65.72265625vw;
   }
 }
 
 @media (min-width: 777px) {
-  .banner {
+  .banner-article {
     --multiplicator: 1;
     --line-count: 4;
   }
 }
 
 @media (min-width: 869px) {
-  .banner {
+  .banner-article {
     --line-count: 5;
     --multiplicator: 1;
   }
 }
 
 @media (min-width: 1115px) {
-  .banner {
+  .banner-article {
     --multiplicator: 1.25;
   }
 }
 
 @media (min-width: 1440px) {
-  .banner {
+  .banner-article {
     --multiplicator: 1.5;
   }
 }
 
 @media (min-width: 1920px) {
-  .banner {
+  .banner-article {
     --multiplicator: 1.75;
   }
 }
