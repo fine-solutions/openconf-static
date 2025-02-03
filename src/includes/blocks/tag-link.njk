@@ -1,0 +1,5 @@
+{% macro tag(parentClass, tag) %}
+  <a class="{{ parentClass }} tag-link tag" href="{{ tag.url }}">
+    {{ tag.label }}
+  </a>
+{% endmacro %}
