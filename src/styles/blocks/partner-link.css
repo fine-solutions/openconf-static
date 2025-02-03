@@ -1,3 +1,7 @@
 .partner-link {
   display: flex;
 }
+
+.partner-link__image {
+  width: 100%;
+}
