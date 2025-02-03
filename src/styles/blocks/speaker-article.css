@@ -1,28 +1,30 @@
-.speaker {
+.speaker-article {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
 
-.speaker__image {
+.speaker-article__image {
   overflow: hidden;
-  background-color: aqua;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   min-width: 60px;
 }
 
-.speaker__information {
+.speaker-article__text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: start;
-  gap: 10px;
+  gap: 6px;
 }
 
-@media (width >= 640px) {
-  .speaker {
-    width: 314px;
-  }
+.speaker-article__name {
+  margin: 0;
+  padding: 0;
 }
+
+/* .speaker-article__tag-list {}
+.speaker-article__tag {} */
