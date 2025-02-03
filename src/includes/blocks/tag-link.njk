@@ -1,5 +1,5 @@
-{% macro tag(parentClass, tag) %}
-  <a class="{{ parentClass }} tag-link tag" href="{{ tag.url }}">
+{% macro tag(parentClass, tag, isHash=false) %}
+  <a class="{{ parentClass }} tag-link {{ 'tag-link--hash' if isHash }} tag" href="{{ tag.url }}">
     {{ tag.label }}
   </a>
 {% endmacro %}

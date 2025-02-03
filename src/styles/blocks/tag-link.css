@@ -7,3 +7,11 @@
   color: hsl(var(--color-text));
   text-decoration: none;
 }
+
+.tag-link--hash {
+  border: none;
+}
+
+.tag-link--hash::before {
+  content: '#';
+}
