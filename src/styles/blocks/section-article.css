@@ -1,0 +1,12 @@
+.section-article {
+  display: flex;
+}
+
+.section-article__wrapper {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* .section-article__prefix {}
+.section-article__label {} */
