@@ -14,7 +14,7 @@
   top: 0px;
 }
 
-.calendar:nth-child(1)::before {
+.calendar--active::before {
   background-color: hsl(var(--color-blue-accent))
 }
 
