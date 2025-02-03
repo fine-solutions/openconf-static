@@ -1,13 +1,112 @@
-{% from "blocks/banner.njk" import banner with context %}
-{% from "blocks/news.njk" import news with context %}
-{% from "blocks/calendar.njk" import calendar with context %}
-{% from "blocks/section.njk" import section with context %}
-{% from "blocks/speaker.njk" import speaker with context %}
-{% from "blocks/placement.njk" import placement with context %}
-{% from "blocks/archive.njk" import archive with context %}
-{% from "blocks/partner.njk" import partner with context %}
-{% from "blocks/document.njk" import document with context %}
+{% from "blocks/banner-article.njk" import banner with context %}
+{% from "blocks/calendar-article.njk" import calendar with context %}
+{% from "blocks/news-article.njk" import news with context %}
+{% from "blocks/section-article.njk" import section with context %}
+{% from "blocks/speaker-article.njk" import speaker with context %}
+{% from "blocks/accommodation-article.njk" import accommodation with context %}
+{% from "blocks/archive-list.njk" import archive with context %}
+{% from "blocks/partner-link.njk" import partner with context %}
+{% from "blocks/document-list.njk" import document with context %}
 
 <main class="index">
-  <h1 class="index__title">Hello World!</h1>
+  <section class="index__section index__section--header">
+    <div class="index__header-cover">
+      <picture>
+        <source
+          srcset="
+            {{ mainImage.url }}.337w.avif 512w,
+            {{ mainImage.url }}.674w.avif 1024w,
+            {{ mainImage.url }}.1348w.avif 2048w,
+            {{ mainImage.url }}.2022w.avif 3072w
+          "
+          type="image/avif"
+        >
+        <source
+          srcset="
+            {{ mainImage.url }}.337w.webp 512w,
+            {{ mainImage.url }}.674w.webp 1024w,
+            {{ mainImage.url }}.1348w.webp 2048w,
+            {{ mainImage.url }}.2022w.webp 3072w
+          "
+          type="image/webp"
+        >
+        <source
+          srcset="
+            {{ mainImage.url }}.337w.jpg 512w,
+            {{ mainImage.url }}.674w.jpg 1024w,
+            {{ mainImage.url }}.1348w.jpg 2048w,
+            {{ mainImage.url }}.2022w.jpg 3072w
+          "
+          type="image/jpeg"
+        >
+        <img class="index__image" src="{{ mainImage.url }}.1348w.jpg" alt="{{ mainImage.title }}">
+      </picture>
+    </div>
+    <div class="index__header-aside">
+      <h1 class="index__title caption">
+        {{ documentTitle | safe }}<br>
+        <span class="index__subtitle">{{ documentSubTitle | safe }}</span>
+      </h1>
+      <p class="index__caption">
+        {{ documentDescription | safe }}
+      </p>
+      <p class="index__location">
+        {{ documentLocation | safe }}
+      </p>
+      <a class="index__action" href="{{ actionInfo.url }}" title="{{ actionInfo.title }}">
+        {{ actionInfo.label }}
+      </a>
+    <div>
+  </section>
+  <section class="index__section index__section--featured">
+    {% for item in bannersItems %}
+      {{ banner('index__banner', item) }}
+    {% endfor %}
+  </section>
+  <section class="index__section index__section--calendar">
+    <h2 class="index__heading title">Календарь</h2>
+    {% for item in calendarItems %}
+      {{ calendar('index__calendar', item) }}
+    {% endfor %}
+  </section>
+  <section class="index__section index__section--documents">
+    <h2 class="index__heading title">Документы</h2>
+    {{ document('index__document', documentItems) }}
+  </section>
+  <section class="index__section index__section--news">
+    <h2 class="index__heading index__heading--no-bottom title">Новости</h2>
+    {% for item in newsItems %}
+      {{ news('index__news', item) }}
+    {% endfor %}
+  </section>
+  <section class="index__section index__section--sections">
+    <h2 class="index__heading title">Секции</h2>
+    {% for item in sectionItems %}
+      {{ section('index__news', item) }}
+    {% endfor %}
+  </section>
+  <section class="index__section index__section--speakers">
+    <h2 class="index__heading title">Спикеры</h2>
+    {% for item in speakerItems %}
+      {{ speaker('index__speaker', item) }}
+    {% endfor %}
+  </section>
+  <section class="index__section index__section--partners">
+    <h2 class="index__heading title">Партнеры</h2>
+    <div class="index__partners">
+      {% for item in partnerItems %}
+        {{ partner('index__speaker', item) }}
+      {% endfor %}
+    </div>
+  </section>
+  <section class="index__section index__section--accommodation">
+    <h2 class="index__heading title">Размещение</h2>
+    {% for item in accommodationItems %}
+      {{ accommodation('index__accommodation', item) }}
+    {% endfor %}
+  </section>
+  <section class="index__section index__section--archive">
+    <h2 class="index__heading title">Архив</h2>
+    {{ archive('index__archive', archiveItems) }}
+  </section>
 </main>
