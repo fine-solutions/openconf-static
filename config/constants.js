@@ -8,7 +8,9 @@ const DEFAULT_ENVS = {
   BASE_CAPTION: 'OpenConf Engine allow to organize<br>a custom conference in few steps.',
   BASE_LOCATION: 'World',
   BASE_SUFFIX: 'openconf',
-  YEARS: String(new Date().getFullYear()),
+  ARCHIVE_YEARS: String(new Date().getFullYear()),
+  CURRENT_YEAR: '2025',
+  CURRENT_NUMBER: 1,
   SERVER_PATH: '/web/sites/openconf/www/',
   GITLAB_TOKEN: '',
 }
@@ -24,7 +26,9 @@ export default {
   baseCaption: getEnv('BASE_CAPTION'),
   baseLocation: getEnv('BASE_LOCATION'),
   baseSuffix: getEnv('BASE_SUFFIX'),
-  years: getEnv('YEARS').split(', '),
+  archiveYears: getEnv('ARCHIVE_YEARS').split(', '),
+  currentYear: getEnv('CURRENT_YEAR'),
+  currentNumber: getEnv('CURRENT_NUMBER'),
   serverPath: getEnv('SERVER_PATH'),
   gitlabToken: getEnv('GITLAB_TOKEN'),
 }
