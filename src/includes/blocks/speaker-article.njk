@@ -1,0 +1,43 @@
+{% from "blocks/tag-link.njk" import tag with context %}
+
+{%  macro speaker(parentClass, item) %}
+  <article class="{{ parentClass }} speaker-article">
+    <div class="speaker-article__image">
+      <picture>
+        <source
+          srcset="
+            {{ item.image }}.avif 1x,
+            {{ item.image }}@2x.avif 2x,
+            {{ item.image }}@3x.avif 3x
+          "
+          type="image/avif"
+        >
+        <source
+          srcset="
+            {{ item.image }}.webp 1x,
+            {{ item.image }}@2x.webp 2x,
+            {{ item.image }}@3x.webp 3x
+          "
+          type="image/webp"
+        >
+        <source
+          srcset="
+            {{ item.image }}.jpg 1x,
+            {{ item.image }}@2x.jpg 2x,
+            {{ item.image }}@3x.jpg 3x
+          "
+          type="image/jpeg"
+        >
+        <img class="speaker-article__image" src="{{ item.image }}.jpg" alt="{{ item.image }}">
+      </picture>
+    </div>
+    <div class="speaker-article__text">
+      <h3 class="speaker-article__name strong">{{ item.name }}</h3>
+      <div class="speaker-article__tag-list">
+        {% for t in item.tags %}
+          {{ tag('speaker-article__tag', t)}}
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+{% endmacro %}
