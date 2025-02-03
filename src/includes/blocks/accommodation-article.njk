@@ -1,0 +1,15 @@
+{% macro accommodation(parentClass, item) %}
+  <article class="{{ parentClass }} accommodation-article">
+    <a class="accommodation-article__link" href="{{ item.url}}" title="{{ item.title }}">
+      <h3 class="accommodation-article__title strong">
+        {{ item.label }}
+      </h3>
+      <p class="accommodation-article__text text">
+        {{ item.text }}
+      </p>
+      <p class="accommodation-article__price tag">
+        от {{ item.price }} р.
+      </p>
+    </a>
+  </article>
+{% endmacro %}
