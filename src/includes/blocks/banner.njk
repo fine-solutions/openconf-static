@@ -1,47 +1,72 @@
-{% from "blocks/button.njk" import button with context %}
-{% from "blocks/tag.njk" import tag with context %}
+{% from "blocks/tag-link.njk" import tag with context %}
 
-{% macro banner(item, isMainBanner=false) %}
-  <section class="banner">
-    {% if isMainBanner %}
-     <div class="banner__image banner__image__hidden">
-        <picture>
-          <source srcset="{{item.image}}">
-          <img src="{{ item.image }}" alt="Тут будет картинка">
-        </picture>
-      </div>
-      <div class="banner__main">
-        <h1 class="banner__title_size_50">
-          RLNC*2025
-        </h1>
-        <h2 class="banner__label_size_24">
-          Радиолокация </br> Навигация  </br> Связь
-        </h2>
-        <span class="caption">
-          XXXI Международная </br> научно-техническая конференция
-        </span>
-        <span class="caption">
-         г. Воронеж
-        </span>
-        <div class="banner__button">
-          {{ button('Подать доклад', '/', 'Вы можете подать свой доклад на конференцию' )}}
-        </div>
-      <div>
-    {% else %}
-      <div class="banner__image">
-        <picture>
-          <source srcset="{{ item.image }}">
-          <img src="{{ item.image }}" alt="Тут будет картинка">
-        </picture>
-      </div>
-      <div class="banner__default">
-        <p class="banner__label">
+{% macro banner(parentClass, item) %}
+  <article class="{{ parentClass }} banner">
+    <a class="banner__link" href="{{ item.url }}">
+      <picture>
+        <source
+          srcset="
+            {{ item.src }}.100w.avif 320w,
+            {{ item.src }}.200w.avif 430w
+          "
+          media="(max-width: 639px)"
+          type="image/avif"
+        >
+        <source
+          srcset="
+            {{ item.src }}.674w.avif 1024w,
+            {{ item.src }}.1348w.avif 2048w,
+            {{ item.src }}.2022w.avif 3072w
+          "
+          media="(min-width: 640px)"
+          type="image/avif"
+        >
+        <source
+          srcset="
+            {{ item.src }}.100w.webp 320w,
+            {{ item.src }}.200w.webp 430w
+          "
+          media="(max-width: 639px)"
+          type="image/webp"
+        >
+        <source
+          srcset="
+            {{ item.src }}.674w.webp 1024w,
+            {{ item.src }}.1348w.webp 2048w,
+            {{ item.src }}.2022w.webp 3072w
+          "
+          media="(min-width: 640px)"
+          type="image/webp"
+        >
+        <source
+          srcset="
+            {{ item.src }}.100w.jpg 320w,
+            {{ item.src }}.200w.jpg 430w
+          "
+          media="(max-width: 639px)"
+          type="image/jpeg"
+        >
+        <source
+          srcset="
+            {{ item.src }}.674w.jpg 1024w,
+            {{ item.src }}.1348w.jpg 2048w,
+            {{ item.src }}.2022w.jpg 3072w
+          "
+          media="(min-width: 640px)"
+          type="image/jpeg"
+        >
+        <img class="banner__image" src="{{ item.src }}.1348w.jpg" alt="{{ item.src.title }}">
+      </picture>
+      <div class="banner__aside">
+        <h3 class="banner__label title">
           {{ item.label }}
-        </p>
-        <div class="banner__tag">
-          {{ tag(item.tag) }}
+        </h3>
+        <div class="banner__tag-list">
+          {% for t in item.tags %}
+            {{ tag('banner__tag', t) }}
+          {% endfor %}
         </div>
       </div>
-    {% endif %}
-  </section>
+    </a>
+  </article>
 {% endmacro %}
