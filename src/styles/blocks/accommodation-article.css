@@ -1,0 +1,44 @@
+.accommodation-article {
+  --line-count: 3;
+  --multiplicator: 1;
+  padding: 12px;
+  margin: 0px -10px;
+}
+
+.accommodation-article:nth-child(odd) {
+  background-color: hsl(var(--color-even));
+}
+
+.accommodation-article__link {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-decoration: none;
+  color: hsl(var(--color-text));
+}
+
+.accommodation-article__title {
+  margin: 0;
+  padding: 0;
+}
+
+.accommodation-article__date {
+  color: hsl(var(--color-caption));
+}
+
+.accommodation-article__text {
+  margin: 0;
+  padding: 0;
+	overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-count);
+  -webkit-box-orient: vertical;
+  height: calc(var(--line-count) * var(--multiplicator) * var(--text-line-height));
+  font-size: calc(var(--multiplicator) * var(--text-font-size));
+  line-height: calc(var(--multiplicator) * var(--text-line-height));
+}
+
+.accommodation-article__price {
+  margin: 0;
+  padding: 0;
+}
