@@ -1,10 +1,8 @@
-.calendar {
-  width: 270px;
-  height: 62px;
+.calendar-article {
   position: relative;
 }
 
-.calendar::before {
+.calendar-article::before {
   content: "";
   width: 4px;
   height: 100%;
@@ -14,19 +12,13 @@
   top: 0px;
 }
 
-.calendar--active::before {
+.calendar-article--active::before {
   background-color: hsl(var(--color-blue-accent))
 }
 
-.calendar__title {
+.calendar-article__title {
   margin: 0px;
 }
-.calendar__text {
+.calendar-article__text {
   line-height: 14px;
-}
-
-@media (width >= 640px) {
-  .calendar {
-    width: 314px;
-  }
 }
