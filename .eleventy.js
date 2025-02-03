@@ -118,17 +118,20 @@ export default async function(config) {
   const faviconKey = `src/favicon-${constants.baseSuffix}.ico`
   const faviconSetting = {}
   faviconSetting[faviconKey] = 'favicon.ico'
-  const logosKey = `src/images/logo-${constants.baseSuffix}`
+  const logosKey = `src/images/logo-${constants.baseSuffix}.*`
   const logosSetting = {}
   logosSetting[logosKey] = 'images/logo'
+  const imagesFolders = ['index', 'partners', 'icons']
+
   config.addPassthroughCopy(faviconSetting)
+  config.addPassthroughCopy(logosSetting)
+  imagesFolders.forEach((folder) => {
+    config.addPassthroughCopy(`src/images/${folder}`)
+  })
+
   config.addPassthroughCopy('src/manifest.json')
   config.addPassthroughCopy('src/robots.txt')
   config.addPassthroughCopy('src/fonts')
-  config.addPassthroughCopy('src/images/icons')
-  config.addPassthroughCopy('src/images/banners');
-  config.addPassthroughCopy('src/images/partners');
-  config.addPassthroughCopy(logosSetting)
 
   // Return
   return {
