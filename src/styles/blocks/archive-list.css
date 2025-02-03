@@ -1,0 +1,10 @@
+.archive-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.archive-list__link {
+  padding: 5px;
+  text-decoration: none;
+}
