@@ -121,7 +121,7 @@ export default async function(config) {
   const logosKey = `src/images/logo-${constants.baseSuffix}.*`
   const logosSetting = {}
   logosSetting[logosKey] = 'images/logo'
-  const imagesFolders = ['index', 'partners', 'icons']
+  const imagesFolders = ['index', 'partners', 'speakers', 'icons']
 
   config.addPassthroughCopy(faviconSetting)
   config.addPassthroughCopy(logosSetting)
