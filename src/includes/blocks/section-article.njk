@@ -1,0 +1,8 @@
+{% macro section(parentClass, item) %}
+  <article class="{{ parentClass }} section-article">
+    <p class="section-article__wrapper">
+      <span class="section-article__prefix strong">{{ item.prefix }}</span>
+      <span class="section-article__label text">{{ item.label }}</span>
+    </p>
+  </article>
+{% endmacro %}
