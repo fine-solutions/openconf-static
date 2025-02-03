@@ -5,18 +5,18 @@
 
 /* Blocks */
 @import url('./blocks/base.css');
-@import url('./blocks/footer.css');
-@import url('./blocks/banner.css');
 @import url('./blocks/button.css');
-@import url('./blocks/news.css');
-@import url('./blocks/tag.css');
-@import url('./blocks/calendar.css');
-@import url('./blocks/section.css');
-@import url('./blocks/speaker.css');
-@import url('./blocks/placement.css');
-@import url('./blocks/archive.css');
-@import url('./blocks/partner.css');
-@import url('./blocks/document.css');
+@import url('./blocks/footer.css');
+@import url('./blocks/tag-link.css');
+@import url('./blocks/banner-article.css');
+@import url('./blocks/document-list.css');
+@import url('./blocks/news-article.css');
+@import url('./blocks/calendar-article.css');
+@import url('./blocks/section-article.css');
+@import url('./blocks/speaker-article.css');
+@import url('./blocks/accommodation-article.css');
+@import url('./blocks/archive-list.css');
+@import url('./blocks/partner-link.css');
 
 /* Views */
 @import url(./views/index.css);
