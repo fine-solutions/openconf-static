@@ -1,0 +1,9 @@
+.tag-link {
+  display: inline-flex;
+  align-self: center;
+  justify-self: start;
+  padding: 2px 4px;
+  border: 1px solid hsl(var(--color-text));
+  color: hsl(var(--color-text));
+  text-decoration: none;
+}

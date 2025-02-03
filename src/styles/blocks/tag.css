@@ -1,9 +1,0 @@
-.tag__item {
-  display: inline-block;
-  vertical-align: top;
-  padding: 2px 4px;
-}
-
-.tag__border {
-  border: 1px solid hsl(var(--color-text));
-}
