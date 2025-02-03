@@ -1,16 +1,16 @@
-.news {
+.news-article {
   padding: 12px;
 }
 
-.news:nth-child(odd) {
+.news-article:nth-child(odd) {
   background-color: hsl(var(--color-even));
 }
 
-.news__date {
+.news-article__date {
   color: hsl(var(--color-placeholder));
 }
 
-.news__information {
+.news-article__information {
   height: 31px;
   padding: 0px;
   margin: 5px 0px 10px;
@@ -21,7 +21,7 @@
   width: 268px;
 }
 
-.news__tags {
+.news-article__tags {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -31,7 +31,7 @@
 }
 
 @media (width >= 640px) {
-  .news__information {
+  .news-article__information {
     width: calc(100% - 20px);
   }
 }
