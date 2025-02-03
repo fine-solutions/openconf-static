@@ -6,5 +6,5 @@
 
 .archive-list__link {
   padding: 5px;
-  text-decoration: none;
+  color: hsl(var(--color-text));
 }
