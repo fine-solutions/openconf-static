@@ -1,8 +1,8 @@
 {% from "blocks/tag-link.njk" import tag with context %}
 
 {% macro banner(parentClass, item) %}
-  <article class="{{ parentClass }} banner">
-    <a class="banner__link" href="{{ item.url }}">
+  <article class="{{ parentClass }} banner-article">
+    <a class="banner-article__link" href="{{ item.url }}">
       <picture>
         <source
           srcset="
@@ -55,15 +55,15 @@
           media="(min-width: 640px)"
           type="image/jpeg"
         >
-        <img class="banner__image" src="{{ item.src }}.1348w.jpg" alt="{{ item.src.title }}">
+        <img class="banner-article__image" src="{{ item.src }}.1348w.jpg" alt="{{ item.src.title }}">
       </picture>
-      <div class="banner__aside">
-        <h3 class="banner__label title">
+      <div class="banner-article__aside">
+        <h3 class="banner-article__label title">
           {{ item.label }}
         </h3>
-        <div class="banner__tag-list">
+        <div class="banner-article__tag-list">
           {% for t in item.tags %}
-            {{ tag('banner__tag', t) }}
+            {{ tag('banner-article__tag', t) }}
           {% endfor %}
         </div>
       </div>
