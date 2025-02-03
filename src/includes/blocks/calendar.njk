@@ -1,9 +1,9 @@
-{%  macro calendar(item) %}
-  <article class="calendar">
+{%  macro calendar(parentClass, item) %}
+  <article class="{{ parentClass }} calendar {{ 'calendar--active' if item.isActive }}">
     <h3 class="calendar__title title">
       {{ item.title }}
-    </h3> 
-    <p class=" text"> 
+    </h3>
+    <p class="calendar__text text">
       {{ item.text }}
     </p>
   </article>
