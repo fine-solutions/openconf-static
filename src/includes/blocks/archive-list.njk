@@ -1,0 +1,9 @@
+{% macro archive(parentClass, items) %}
+  <div class="{{ parentClass }} archive-list">
+    {% for item in items %}
+      <a class="archive-list__link strong" href="{{ item.url }}">
+        {{ item.label }}
+      </a>
+    {% endfor %}
+  </div>
+{% endmacro %}
