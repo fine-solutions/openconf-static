@@ -1,0 +1,17 @@
+{% from "blocks/tag-link.njk" import tag with context %}
+
+{% macro news(parentClass, item) %}
+  <article class="{{ parentClass }} news-article">
+    <div class="news-article__date tag">
+       {{ item.time }}
+    </div>
+    <p class="news-article__information text">
+      {{ item.text }}
+    </p>
+    <div class="news-article__tags">
+      {% for tg in item.tags %}
+        {{ tag(tg.label, true)}}
+      {% endfor %}
+    </div>
+  </article>
+{% endmacro %}
