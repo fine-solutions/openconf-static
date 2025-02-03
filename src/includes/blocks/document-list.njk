@@ -1,0 +1,17 @@
+{% macro document(parentClass, items) %}
+  <ul class="{{ parentClass }} document-list">
+    {% for item in items %}
+      {% set label %}
+        {{ item.label }}{% if item.type == 'pdf' %} ({{ item.type }}) {% endif %}
+      {% endset %}
+
+      <li class="document-list__item strong">
+        {% if item.isActive %}
+          <a class="document-list__link strong" href="{{ item.url }}" title="{{ item.title }}">{{ label }}</a>
+        {% else %}
+          <span class="document-list__link document-list__link--disabled strong">{{ label }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
