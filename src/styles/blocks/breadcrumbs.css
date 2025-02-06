@@ -1,0 +1,10 @@
+.breadcrumbs-aside {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.breadcrumbs-aside__link {
+  color: hsl(var(--color-text));
+  text-decoration: none;
+}
