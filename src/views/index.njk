@@ -1,4 +1,4 @@
-{% from "blocks/banner-article.njk" import banner with context %}
+{% from "blocks/featured-article.njk" import featured with context %}
 {% from "blocks/calendar-article.njk" import calendar with context %}
 {% from "blocks/news-article.njk" import news with context %}
 {% from "blocks/section-article.njk" import section with context %}
@@ -60,17 +60,17 @@
       {% endif %}
     <div>
   </section>
-  {% if bannersItems and bannersItems.length > 0 %}
+  {% if featuredPapers and featuredPapers.length > 0 %}
     <section id="featured" class="index__section index__section--featured">
-      {% for item in bannersItems %}
-        {{ banner('index__banner', item) }}
+      {% for item in featuredPapers %}
+        {{ featured('index__featured-paper', item) }}
       {% endfor %}
     </section>
   {% endif %}
-  {% if calendarItems and calendarItems.length > 0 %}
+  {% if timeLine and timeLine.length > 0 %}
     <section id="calendar" class="index__section index__section--calendar">
       <h2 class="index__heading title">Календарь</h2>
-      {% for item in calendarItems %}
+      {% for item in timeLine %}
         {{ calendar('index__calendar', item) }}
       {% endfor %}
     </section>
@@ -81,52 +81,52 @@
       {{ document('index__document', documentItems) }}
     </section>
   {% endif %}
-  {% if newsItems and newsItems.length > 0 %}
+  {% if newsList and newsList.length > 0 %}
     <section id="news" class="index__section index__section--news">
       <h2 class="index__heading index__heading--no-bottom title">Новости</h2>
-      {% for item in newsItems %}
+      {% for item in newsList %}
         {{ news('index__news', item) }}
       {% endfor %}
     </section>
   {% endif %}
-  {% if sectionItems and sectionItems.length > 0 %}
+  {% if sections and sections.length > 0 %}
     <section id="sections" class="index__section index__section--sections">
       <h2 class="index__heading title">Секции</h2>
-      {% for item in sectionItems %}
+      {% for item in sections %}
         {{ section('index__news', item) }}
       {% endfor %}
     </section>
   {% endif %}
-  {% if speakerItems and speakerItems.length > 0 %}
+  {% if speakers and speakers.length > 0 %}
     <section id="speakers" class="index__section index__section--speakers">
       <h2 class="index__heading title">Спикеры</h2>
-      {% for item in speakerItems %}
+      {% for item in speakers %}
         {{ speaker('index__speaker', item) }}
       {% endfor %}
     </section>
   {% endif %}
-  {% if partnerItems and partnerItems.length > 0 %}
+  {% if partners and partners.length > 0 %}
     <section id="partners" class="index__section index__section--partners">
       <h2 class="index__heading title">Партнеры</h2>
       <div class="index__partners">
-        {% for item in partnerItems %}
+        {% for item in partners %}
           {{ partner('index__speaker', item) }}
         {% endfor %}
       </div>
     </section>
   {% endif %}
-  {% if accommodationItems and accommodationItems.length > 0 %}
+  {% if accommodations and accommodations.length > 0 %}
     <section id="accommodation" class="index__section index__section--accommodation">
       <h2 class="index__heading title">Размещение</h2>
-      {% for item in accommodationItems %}
+      {% for item in accommodations %}
         {{ accommodation('index__accommodation', item) }}
       {% endfor %}
     </section>
   {% endif %}
-  {% if archiveItems and archiveItems.length > 0 %}
+  {% if archive and archive.length > 0 %}
     <section id="archive" class="index__section index__section--archive">
       <h2 class="index__heading title">Архив</h2>
-      {{ archive('index__archive', archiveItems) }}
+      {{ archive('index__archive', archive) }}
     </section>
   {% endif %}
 </main>
