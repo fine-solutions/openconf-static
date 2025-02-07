@@ -53,9 +53,11 @@
       <p class="index__location">
         {{ documentLocation | safe }}
       </p>
-      <a class="index__action" href="{{ actionInfo.url }}" title="{{ actionInfo.title }}">
-        {{ actionInfo.label }}
-      </a>
+      {% if actionInfo %}
+        <a class="index__action" href="{{ actionInfo.url }}" title="{{ actionInfo.title }}">
+          {{ actionInfo.label }}
+        </a>
+      {% endif %}
     <div>
   </section>
   {% if bannersItems and bannersItems.length > 0 %}
