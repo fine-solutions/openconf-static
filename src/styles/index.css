@@ -17,6 +17,7 @@
 @import url('./blocks/accommodation-article.css');
 @import url('./blocks/archive-list.css');
 @import url('./blocks/partner-link.css');
+@import url('./blocks/breadcrumbs.css');
 
 /* Views */
 @import url(./views/index.css);
