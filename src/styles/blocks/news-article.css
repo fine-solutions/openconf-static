@@ -26,6 +26,12 @@
   height: calc(var(--line-count) * var(--multiplicator) * var(--text-line-height));
   font-size: calc(var(--multiplicator) * var(--text-font-size));
   line-height: calc(var(--multiplicator) * var(--text-line-height));
+  text-decoration: none;
+  color: hsl(var(--color-text));
+}
+
+.news-article__text:hover {
+  text-decoration: underline;
 }
 
 .news-article__tag-list {

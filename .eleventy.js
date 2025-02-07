@@ -63,6 +63,10 @@ export default async function(config) {
 
   // Extensions
   // Collections
+  config.addCollection('news', function(collection) {
+    return collection.getFilteredByGlob('src/pages/news/*/index.md')
+  })
+
   // Libraries
   // NunjucksShortcodes
   // Filters
