@@ -110,7 +110,7 @@
     width: 100%;
     height: 100%;
   }
-  
+
   .index__header-aside {
     max-width: 364px;
   }
@@ -201,14 +201,6 @@
     grid-template-columns: 1fr 364px;
     gap: 0px;
   }
-
-  /* .index__header-cover {
-    width: 65.72265625vw;
-  } */
-
-  /* .index__header-aside {
-    width: 365px;
-  } */
 
   .index__action {
     display: none;
