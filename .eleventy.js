@@ -8,6 +8,7 @@ import htmlMin from 'html-minifier-terser'
 import { parseHTML } from 'linkedom'
 
 import constants from './config/constants.js'
+import { timeStamp } from 'console'
 
 export default async function(config) {
   // Settings
@@ -68,7 +69,12 @@ export default async function(config) {
   })
 
   // Libraries
-  // NunjucksShortcodes
+  // Shortcodes
+  config.addShortcode('newsArticleDate', ( timeStamp ) => {
+    const date = new Date(timeStamp)
+    return `${date.toLocaleString('ru-RU')}`
+  })
+
   // Filters
   // Transforms
   config.addTransform('html-minify', (content, path) => {
