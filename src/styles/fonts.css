@@ -17,24 +17,24 @@
   --menu-font-weight: 400; /* Normal */
 
   /* Font Sizes */
-  --caption-font-size: 12px;
+  --caption-font-size: 14px;
   --input-font-size: 16px;
   --title-font-size: 20px;
-  --value-font-size: 6px;
-  --text-font-size: 12px;
-  --tag-font-size: 10px;
-  --strong-font-size: 12px;
-  --menu-font-size: 16px;
+  --value-font-size: 10px;
+  --text-font-size: 16px;
+  --tag-font-size: 12px;
+  --strong-font-size: 16px;
+  --menu-font-size: 18px;
 
   /* Font Line Hights */
-  --caption-line-height: 16px;
-  --input-line-height: 20px;
-  --title-line-height: 24px;
-  --value-line-height: 12px;
-  --text-line-height: 14px;
-  --tag-line-height: 12px;
-  --strong-line-height: 12px;
-  --menu-line-height: 12px;
+  --caption-line-height: calc(4 / 3);
+  --input-line-height: calc(5 / 4);
+  --title-line-height: calc(6 / 5);
+  --value-line-height: 2;
+  --text-line-height: calc(7 / 6);
+  --tag-line-height: calc(6 / 5);
+  --strong-line-height: calc(7 / 6);
+  --menu-line-height: calc(3 / 4);
 
   --font-size: var(--text-font-size);
   --font-line-height: calc(var(--text-line-height) / var(--text-font-size));
