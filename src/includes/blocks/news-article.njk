@@ -3,7 +3,7 @@
 {% macro news(parentClass, item) %}
   <article class="{{ parentClass }} news-article">
     <time class="news-article__date tag" datetime="{{ item.data.updated }}">
-       {{ item.data.updated }}
+       {% newsArticleDate item.data.updated %}
     </time>
     <a class="news-article__text text" href="{{ item.filePathStem }}.html">
       {{ item.data.summary | safe }}
