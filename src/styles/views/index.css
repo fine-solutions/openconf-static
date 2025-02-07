@@ -1,5 +1,10 @@
 .index {
+  --has-featured: 0;
   display: grid;
+}
+
+.index:has(.index__section--featured) {
+  --has-featured: 1;
 }
 
 .index__image {
@@ -148,8 +153,8 @@
   .index__section--news {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 5 ;
+    grid-row-start: calc(2 + var(--has-featured));
+    grid-row-end: calc(4 + var(--has-featured));
   }
 
   .index__section--sections {
