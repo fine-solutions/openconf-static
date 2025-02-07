@@ -9,7 +9,7 @@
 {% from "blocks/document-list.njk" import document with context %}
 
 <main class="index">
-  <section class="index__section index__section--header">
+  <section id="header" class="index__section index__section--header">
     <div class="index__header-cover">
       <picture>
         <source
@@ -59,14 +59,14 @@
     <div>
   </section>
   {% if bannersItems and bannersItems.length > 0 %}
-    <section class="index__section index__section--featured">
+    <section id="featured" class="index__section index__section--featured">
       {% for item in bannersItems %}
         {{ banner('index__banner', item) }}
       {% endfor %}
     </section>
   {% endif %}
   {% if calendarItems and calendarItems.length > 0 %}
-    <section class="index__section index__section--calendar">
+    <section id="calendar" class="index__section index__section--calendar">
       <h2 class="index__heading title">Календарь</h2>
       {% for item in calendarItems %}
         {{ calendar('index__calendar', item) }}
@@ -74,13 +74,13 @@
     </section>
   {% endif %}
   {% if documentItems and documentItems.length > 0 %}
-    <section class="index__section index__section--documents">
+    <section id="documents" class="index__section index__section--documents">
       <h2 class="index__heading title">Документы</h2>
       {{ document('index__document', documentItems) }}
     </section>
   {% endif %}
   {% if newsItems and newsItems.length > 0 %}
-    <section class="index__section index__section--news">
+    <section id="news" class="index__section index__section--news">
       <h2 class="index__heading index__heading--no-bottom title">Новости</h2>
       {% for item in newsItems %}
         {{ news('index__news', item) }}
@@ -88,7 +88,7 @@
     </section>
   {% endif %}
   {% if sectionItems and sectionItems.length > 0 %}
-    <section class="index__section index__section--sections">
+    <section id="sections" class="index__section index__section--sections">
       <h2 class="index__heading title">Секции</h2>
       {% for item in sectionItems %}
         {{ section('index__news', item) }}
@@ -96,7 +96,7 @@
     </section>
   {% endif %}
   {% if speakerItems and speakerItems.length > 0 %}
-    <section class="index__section index__section--speakers">
+    <section id="speakers" class="index__section index__section--speakers">
       <h2 class="index__heading title">Спикеры</h2>
       {% for item in speakerItems %}
         {{ speaker('index__speaker', item) }}
@@ -104,7 +104,7 @@
     </section>
   {% endif %}
   {% if partnerItems and partnerItems.length > 0 %}
-    <section class="index__section index__section--partners">
+    <section id="partners" class="index__section index__section--partners">
       <h2 class="index__heading title">Партнеры</h2>
       <div class="index__partners">
         {% for item in partnerItems %}
@@ -114,7 +114,7 @@
     </section>
   {% endif %}
   {% if accommodationItems and accommodationItems.length > 0 %}
-    <section class="index__section index__section--accommodation">
+    <section id="accommodation" class="index__section index__section--accommodation">
       <h2 class="index__heading title">Размещение</h2>
       {% for item in accommodationItems %}
         {{ accommodation('index__accommodation', item) }}
@@ -122,7 +122,7 @@
     </section>
   {% endif %}
   {% if archiveItems and archiveItems.length > 0 %}
-    <section class="index__section index__section--archive">
+    <section id="archive" class="index__section index__section--archive">
       <h2 class="index__heading title">Архив</h2>
       {{ archive('index__archive', archiveItems) }}
     </section>
