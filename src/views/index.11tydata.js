@@ -4,7 +4,7 @@ export default {
 
   eleventyComputed: {
     documentTitle: function (data) {
-      return `${data.constants.baseTitle}*${data.constants.archiveYears[data.constants.archiveYears.length - 1]}`
+      return `${data.constants.baseTitle}*${data.constants.currentYear}`
     },
 
     documentSubTitle: function (data) {
