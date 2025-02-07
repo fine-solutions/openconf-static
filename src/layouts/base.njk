@@ -10,5 +10,6 @@
     {{ header('base__header') }}
     {{ content | safe }}
     {{ footer('base__footer') }}
+    <script src="/scripts/index.js" {% if env.isDevEnv %}type="module"{% endif %}></script>
   </body>
 </html>

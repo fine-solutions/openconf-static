@@ -55,6 +55,7 @@ export default async function(config) {
       resolve: {
         alias: {
           '/styles': path.resolve('.', 'src/styles'),
+          '/scripts': path.resolve('.', 'src/scripts'),
         },
       },
     },
