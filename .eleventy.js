@@ -129,6 +129,7 @@ export default async function(config) {
     config.addPassthroughCopy(`src/images/${folder}`)
   })
 
+  config.addPassthroughCopy('src/docs/*')
   config.addPassthroughCopy('src/manifest.json')
   config.addPassthroughCopy('src/robots.txt')
   config.addPassthroughCopy('src/fonts')
