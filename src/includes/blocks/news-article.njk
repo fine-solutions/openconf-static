@@ -5,12 +5,12 @@
     <time class="news-article__date tag" datetime="{{ item.data.updated }}">
        {% newsArticleDate item.data.updated %}
     </time>
-    <a class="news-article__text text" href="{{ item.filePathStem }}.html">
+    <a class="news-article__text text" href="/news/{{item.fileSlug}}/index.html">
       {{ item.data.summary | safe }}
     </a>
     <div class="news-article__tag-list">
-      {% for tg in item.data.tags %}
-        {{ tag('news-article__tag', tg, true)}}
+      {% for t in item.data.tags %}
+        {{ tag('news-article__tag', t, true)}}
       {% endfor %}
     </div>
   </article>
