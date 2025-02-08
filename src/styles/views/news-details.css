@@ -1,0 +1,37 @@
+.news-details {
+  display: grid;
+}
+
+.news-details__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 20px 25px;
+}
+
+/* .news-details__section--details {
+
+} */
+
+.news-details__section--details * {
+  margin: 0.5em;
+}
+/*
+.news-details__section--list {
+
+}
+
+.news-details__heading {
+
+}
+
+.news-details__news {
+
+} */
+
+@media (min-width: 640px) {
+  .news-details {
+    grid-template-columns: auto clamp(264px, 30%, 364px);
+  }
+}

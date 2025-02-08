@@ -20,4 +20,5 @@
 @import url('./blocks/breadcrumbs.css');
 
 /* Views */
-@import url(./views/index.css);
+@import url('./views/index.css');
+@import url('./views/news-details.css');
