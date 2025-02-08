@@ -67,6 +67,16 @@ export default async function(config) {
     return collection.getFilteredByGlob('src/pages/news/*/index.md')
   })
 
+  config.addCollection('tags', function() {
+    return [
+      {
+        label: 'Важно',
+        title: 'С этим тегом публикуются наиболее важные новости конференции',
+        url: 'important',
+      }
+    ]
+  })
+
   // Libraries
   // Shortcodes
   config.addShortcode('newsArticleDate', ( timeStamp ) => {
