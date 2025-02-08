@@ -72,16 +72,16 @@ export default {
         {
           label: 'Информационное письмо',
           type: 'pdf',
-          url: '/docs/rlnc-call-for-paper.pdf',
+          url: '/docs/2025/rlnc-call-for-paper.pdf',
           title: 'Информационное письмо в формате PDF',
-          isActive: false,
+          isActive: true,
         },
         {
           label: 'Шаблоны оформления',
-          type: 'pdf',
-          url: '',
+          type: 'doc',
+          url: '/docs/2025/template.doc',
           title: 'Шаблоны оформления в формате PDF',
-          isActive: false,
+          isActive: true,
         },
         {
           label: 'Программа',
