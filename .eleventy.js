@@ -8,7 +8,6 @@ import htmlMin from 'html-minifier-terser'
 import { parseHTML } from 'linkedom'
 
 import constants from './config/constants.js'
-import { timeStamp } from 'console'
 
 export default async function(config) {
   // Settings
