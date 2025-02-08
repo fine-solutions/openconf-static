@@ -20,6 +20,19 @@ export default {
       return article.data.summary
     },
 
+    breadcrumbs: function () {
+      return [
+        {
+          url: '/',
+          label: 'Главная'
+        },
+        {
+          url: '/#news',
+          label: 'Новости'
+        },
+      ]
+    },
+
     tags: function (data) {
       const { article } = data
       return data.collections.tags.filter((t) => article.data.tags.includes(t.url))

@@ -19,6 +19,10 @@ export default {
       return data.constants.baseLocation
     },
 
+    breadcrumbs: function () {
+      return undefined
+    },
+
     actionInfo: function () {
       return false
       // return {
@@ -80,7 +84,7 @@ export default {
           label: 'Шаблоны оформления',
           type: 'doc',
           url: '/docs/2025/template.doc',
-          title: 'Шаблоны оформления в формате PDF',
+          title: 'Шаблоны оформления в формате DOC',
           isActive: true,
         },
         {
