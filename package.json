@@ -7,8 +7,8 @@
   "license": "GPL-3.0-only",
   "version": "1.0.0",
   "scripts": {
-    "start": "eleventy --incremental --serve --quiet",
-    "build": "eleventy --quiet",
+    "start": "cross-env NODE_ENV=development eleventy --incremental --serve --quiet",
+    "build": "cross-env NODE_ENV=production eleventy --quiet",
     "lint:editorconfig": "editorconfig-checker",
     "lint:eslint": "eslint '**/*.js'",
     "lint:stylelint": "stylelint 'src/styles/**/*.css'"
@@ -17,6 +17,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-vite": "^5.0.2",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
     "editorconfig-checker": "^6.0.1",
     "eslint": "^9.18.0",
