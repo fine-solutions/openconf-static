@@ -11,7 +11,6 @@ export default async function(eleventyConfig) {
   const logosKey = `src/images/logo-${constants.baseSuffix}`
   const logosSetting = {}
   logosSetting[logosKey] = 'images/logo'
-  console.log(logosSetting)
   eleventyConfig.addPassthroughCopy(logosSetting)
 
   // Other images
