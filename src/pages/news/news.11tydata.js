@@ -18,15 +18,19 @@ export default {
       return data.summary
     },
 
-    breadcrumbs: function () {
+    breadcrumbs: function (data) {
       return [
         {
           url: '/',
           label: 'Главная'
         },
         {
-          url: '/#news',
+          url: '/news',
           label: 'Новости'
+        },
+        {
+          url: `/news/${data.page.fileSlug}/index.html`,
+          label: `${data.title}`
         },
       ]
     },
