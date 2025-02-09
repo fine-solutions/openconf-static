@@ -10,7 +10,17 @@ export default {
     permalink: '/accommodation/{{ accommodation.fileSlug }}/index.html',
 
   eleventyComputed: {
-    breadcrumbsItems: function () {
+    documentTitle: function (data) {
+      const { accommodation } = data
+      return `RLNC*2025 | Размещение | ${accommodation.data.title}`
+    },
+
+    documentDescription: function (data) {
+      const { accommodation } = data
+      return accommodation.data.summary
+    },
+
+    breadcrumbs: function () {
       return [
         {
           url: '/',
@@ -22,16 +32,10 @@ export default {
         },
       ]
     },
-    imageItem: function () {
+    imageItem: function (data) {
       return {
-        url: '/images/accommodation/benefit',
-        alt: 'На изображении представлено здание отеля «Benefit Plaza». Светлое здание с несколькими этажами. На фасаде видны большие окна, а также вывеска с названием отеля на английском языке',
-      }
-    },
-    imageMap: function () {
-      return {
-        url: '/images/accommodation/map',
-        alt: 'На изображении представлена карта, где находится отель «Benefit Plaza».',
+        url: `/images/accommodation/${data.accommodation.fileSlug}`,
+        alt: data.accommodation.data.title,
       }
     },
   },
