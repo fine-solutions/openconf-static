@@ -24,6 +24,7 @@
     "esbuild": "^0.25.0",
     "eslint": "^9.18.0",
     "htmlnano": "^2.1.1",
+    "lightningcss": "^1.29.1",
     "linkedom": "^0.18.6",
     "postcss": "^8.4.49",
     "postcss-csso": "^6.0.1",
