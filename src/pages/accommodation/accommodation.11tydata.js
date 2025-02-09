@@ -32,7 +32,7 @@ export default {
     },
     imageItem: function (data) {
       return {
-        url: `/images/accommodation/${data.fileSlug}`,
+        url: `/images/accommodation/${data.page.fileSlug}`,
         alt: data.title,
       }
     },
