@@ -198,8 +198,6 @@ export default {
 
     accommodations: function (data) {
       const { accommodations } = data.collections
-      console.log(accommodations[0])
-
       return accommodations.map((a) => {
         return {
           label: a.data.title,
