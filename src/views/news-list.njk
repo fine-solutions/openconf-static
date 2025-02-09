@@ -1,0 +1,12 @@
+{% from "blocks/news-article.njk" import news with context %}
+
+<main class="news-details">
+  {% if newsList and newsList.length > 0 %}
+    <section id="list" class="news-details__section news-details__section--list">
+      <h1 class="news-details__heading title">Новости</h1>
+      {% for item in newsList %}
+        {{ news('news-details__news', item) }}
+      {% endfor %}
+    </section>
+  {% endif %}
+</main>
