@@ -7,7 +7,7 @@ export default {
     alias: 'article',
   },
 
-  permalink: '/news/{{ article.fileSlug}}/index.html',
+  permalink: '/news/{{ article.fileSlug }}/index.html',
 
   eleventyComputed: {
     documentTitle: function (data) {
@@ -35,7 +35,7 @@ export default {
 
     tags: function (data) {
       const { article } = data
-      return data.collections.tags.filter((t) => article.data.tags.includes(t.url))
+      return data.collections.tags.filter((t) => article.data?.tags.includes(t.url))
     },
 
     newsList: function (data) {
