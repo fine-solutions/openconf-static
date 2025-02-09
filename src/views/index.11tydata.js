@@ -196,23 +196,19 @@ export default {
       ]
     },
 
-    accommodations: function () {
-      return [
-        {
-          label: 'Benefit Plaza',
-          text: 'Скидка на все категории номеров 15%. В стоимость включены: завтрак «шведский стол», Интернет, пользование тренажерным залом. К услугам гостей 173 просторных комфортабельных номера. Отель гарантирует безопасность и комфортабельный',
-          url: 'https://www.benefitplaza.ru/contact.htm',
-          title: 'Перейти на страницу с описанием условий размещения в отеле Benefit Plaza',
-          price: 3750,
-        },
-        {
-          label: 'Degas',
-          text: 'Завтрак «Шведский стол» включен в стоимость проживания. Стоимость дополнительного завтрака 700 руб/чел.',
-          url: 'https://degas-hotel.ru',
-          title: 'Перейти на страницу с описанием условий размещения в отеле Degas',
-          price: 4500,
-        },
-      ]
+    accommodations: function (data) {
+      const { accommodations } = data.collections
+      console.log(accommodations[0])
+
+      return accommodations.map((a) => {
+        return {
+          label: a.data.title,
+          text: a.data.summary,
+          url: `/accommodation/${a.fileSlug}/index.html`,
+          title: `Перейти на страницу с описанием условий размещения в отеле «${a.data.title}»`,
+          price: a.data.price,
+        }
+      })
     },
 
     archive: function () {
