@@ -1,3 +1,7 @@
+---
+layout: base.njk
+---
+
 <main class="accommodation">
   <section class="accommodation__banner">
     <picture>
@@ -33,36 +37,36 @@
   </section>
 
   <section class="accommodation__section accommodation__section--hotel">
-    {{ accommodation.templateContent | safe }}
+    {{ content | safe }}
   </section>
 
   <section class="accommodation__section accommodation__section--aside">
     <p class="accommodation__contact text">
-      <span class="strong">До места проведения:</span> {{ accommodation.data.arrival }}
+      <span class="strong">До места проведения:</span> {{ data.arrival }}
     </p>
     <p class="accommodation__contact text">
-      <span class="strong">Цена:</span> {{ accommodation.data.price }}
+      <span class="strong">Цена:</span> {{ data.price }}
     </p>
     <p class="accommodation__contact text">
       <span class="strong">Телефоны:</span>
-      {% for p in accommodation.data.phone %}
+      {% for p in data.phone %}
         <br><a class="accommodation__link" href="{{ p.url }}">{{ p.label }}</a>
       {% endfor %}
     </p>
     <p class="accommodation__contact text">
       <span class="strong">Электронная почта:</span>
-      {% for e in accommodation.data.email %}
+      {% for e in data.email %}
         <br><a class="accommodation__link" href="{{ e.url }}">{{ e.label }}</a>
       {% endfor %}
     </p>
     <p class="accommodation__contact text">
       <span class="strong">Адрес:</span>
-      {% for a in accommodation.data.address %}
+      {% for a in data.address %}
         <br><a class="accommodation__link" href="{{ a.url }}">{{ a.label }}</a>
       {% endfor %}
     </p>
     <p class="accommodation__contact text">
-      <span class="strong">До места проведения:</span> {{ accommodation.data.promo }}
+      <span class="strong">До места проведения:</span> {{ data.promo }}
     </p>
   </section>
 </main>

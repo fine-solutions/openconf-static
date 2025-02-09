@@ -4,7 +4,7 @@ export default async function(eleventyConfig) {
   })
 
   eleventyConfig.addCollection('accommodations', function(collection) {
-    return collection.getFilteredByGlob('src/pages/accommodations/*/index.md')
+    return collection.getFilteredByGlob('src/pages/accommodation/*/index.md')
   })
 
   eleventyConfig.addCollection('tags', function() {
