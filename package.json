@@ -1,5 +1,8 @@
 {
   "private": true,
+  "engines": {
+    "node": "22"
+  },
   "type": "module",
   "name": "openconf-static",
   "description": "A static site for any conferences based on 11ty engine.",
@@ -7,7 +10,7 @@
   "license": "GPL-3.0-only",
   "version": "1.0.0",
   "scripts": {
-    "start": "cross-env NODE_ENV=development eleventy --incremental --serve --quiet",
+    "start": "cross-env NODE_ENV=development eleventy --incremental --serve",
     "build": "cross-env NODE_ENV=production eleventy --quiet",
     "lint:editorconfig": "editorconfig-checker",
     "lint:eslint": "eslint '**/*.js'",
@@ -33,5 +36,9 @@
     "postcss-media-minmax": "^5.0.0",
     "stylelint": "^16.13.0",
     "stylelint-config-standard": "^37.0.0"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead"
+  ]
 }
