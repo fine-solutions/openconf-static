@@ -1,24 +1,21 @@
 export default {
-  layout: 'base.njk',
-
-  pagination: {
-    data: 'collections.news',
-    size: 1,
-    alias: 'article',
-  },
-
-  permalink: '/news/{{ article.fileSlug }}/index.html',
-  fullPageUrl: '/news/{{ article.fileSlug }}/index.html',
+  layout: 'news.njk',
 
   eleventyComputed: {
+    permalink: function (data) {
+      return `/news/${data.page.fileSlug}/index.html`
+    },
+
+    fullPageUrl: function (data) {
+      return `/news/${data.page.fileSlug}/index.html`
+    },
+
     documentTitle: function (data) {
-      const { article } = data
-      return `Конференция RLNC*2025 | Новости | ${article.data.title}`
+      return `Конференция RLNC*2025 | Новости | ${data.title}`
     },
 
     documentDescription: function (data) {
-      const { article } = data
-      return article.data.summary
+      return data.summary
     },
 
     breadcrumbs: function () {
@@ -35,8 +32,7 @@ export default {
     },
 
     tags: function (data) {
-      const { article } = data
-      return data.collections.tags.filter((t) => article.data?.tags.includes(t.url))
+      return data.collections.tags.filter((t) => data.tags.includes(t.url))
     },
 
     newsList: function (data) {

@@ -1,9 +1,13 @@
+---
+layout: base.njk
+---
+
 {% from "blocks/news-article.njk" import news with context %}
 {% from "blocks/tag-link.njk" import tag with context %}
 
 <main class="news-details">
   <section id="details" class="news-details__section news-details__section--details">
-    {{ article.templateContent | safe }}
+    {{ content | safe }}
      <div class="news-details__tag-list">
       {% for t in tags %}
         {{ tag('news-details__tag', t, true)}}
