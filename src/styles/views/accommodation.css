@@ -1,0 +1,48 @@
+.accommodation {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 20px 25px;
+}
+
+.accommodation__banner {
+  width: auto;
+}
+
+.accommodation__image {
+  width: calc(100vw - 2 * 25px);
+}
+
+.accommodation__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.accommodation__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.accommodation__link {
+  color: hsl(var(--color-text));
+}
+
+@media (min-width: 640px) {
+  .accommodation {
+    grid-template-columns: auto clamp(264px, 30%, 364px);
+  }
+
+  .accommodation__banner {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .accommodation__section--hotel {
+    grid-column-start: 1;
+  }
+
+  .accommodation__section--aside {
+    grid-column-start: 2;
+  }
+}

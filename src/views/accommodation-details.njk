@@ -1,0 +1,68 @@
+<main class="accommodation">
+  <section class="accommodation__banner">
+    <picture>
+      <source
+        srcset="
+          {{ imageItem.url }}.512w.avif 512w,
+          {{ imageItem.url }}.1024w.avif 1024w,
+          {{ imageItem.url }}.2048w.avif 2048w,
+          {{ imageItem.url }}.3072w.avif 3072w
+        "
+        type="image/avif"
+      >
+      <source
+        srcset="
+          {{ imageItem.url }}.512w.webp 512w,
+          {{ imageItem.url }}.1024w.webp 1024w,
+          {{ imageItem.url }}.2048w.webp 2048w,
+          {{ imageItem.url }}.3072w.webp 3072w
+        "
+        type="image/webp"
+      >
+      <source
+        srcset="
+          {{ imageItem.url }}.512w.jpg 512w,
+          {{ imageItem.url }}.1024w.jpg 1024w,
+          {{ imageItem.url }}.2048w.jpg 2048w,
+          {{ imageItem.url }}.3072w.jpg 3072w
+        "
+        type="image/jpeg"
+      >
+      <img class="accommodation__image" src="{{ imageItem.url }}.2048w.jpg" alt="{{ imageItem.title }}">
+    </picture>
+  </section>
+
+  <section class="accommodation__section accommodation__section--hotel">
+    {{ accommodation.templateContent | safe }}
+  </section>
+
+  <section class="accommodation__section accommodation__section--aside">
+    <p class="accommodation__contact text">
+      <span class="strong">До места проведения:</span> {{ accommodation.data.arrival }}
+    </p>
+    <p class="accommodation__contact text">
+      <span class="strong">Цена:</span> {{ accommodation.data.price }}
+    </p>
+    <p class="accommodation__contact text">
+      <span class="strong">Телефоны:</span>
+      {% for p in accommodation.data.phone %}
+        <br><a class="accommodation__link" href="{{ p.url }}">{{ p.label }}</a>
+      {% endfor %}
+    </p>
+    <p class="accommodation__contact text">
+      <span class="strong">Электронная почта:</span>
+      {% for e in accommodation.data.email %}
+        <br><a class="accommodation__link" href="{{ e.url }}">{{ e.label }}</a>
+      {% endfor %}
+    </p>
+    <p class="accommodation__contact text">
+      <span class="strong">Адрес:</span>
+      {% for a in accommodation.data.address %}
+        <br><a class="accommodation__link" href="{{ a.url }}">{{ a.label }}</a>
+      {% endfor %}
+    </p>
+    <p class="accommodation__contact text">
+      <span class="strong">До места проведения:</span> {{ accommodation.data.promo }}
+    </p>
+  </section>
+</main>
