@@ -73,6 +73,10 @@ export default async function(config) {
     return collection.getFilteredByGlob('src/pages/news/*/index.md')
   })
 
+  config.addCollection('accommodations', function(collection) {
+    return collection.getFilteredByGlob('src/pages/accommodations/*/index.md')
+  })
+
   config.addCollection('tags', function() {
     return [
       {
@@ -147,7 +151,7 @@ export default async function(config) {
   const logosKey = `src/images/logo-${constants.baseSuffix}.*`
   const logosSetting = {}
   logosSetting[logosKey] = 'images/logo'
-  const imagesFolders = ['index', 'partners', 'speakers', 'icons']
+  const imagesFolders = ['index', 'partners', 'speakers', 'icons', 'accommodation']
 
   config.addPassthroughCopy(faviconSetting)
   config.addPassthroughCopy(logosSetting)

@@ -46,8 +46,8 @@ export default {
           n.data.tags = n.data.tags.map((t) => {
             return {
               url: t,
-              label: tags.filter((s) => s.url === t)[0].label,
-              title: tags.filter((s) => s.url === t)[0].title,
+              label: tags.filter((s) => s.url === t)[0]?.label,
+              title: tags.filter((s) => s.url === t)[0]?.title,
             }
           })
           return n
