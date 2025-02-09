@@ -1,6 +1,6 @@
 {
   "private": true,
-	"type": "module",
+  "type": "module",
   "name": "openconf-static",
   "description": "A static site for any conferences based on 11ty engine.",
   "author": "Meetings Ecosystem",
@@ -20,7 +20,7 @@
     "dotenv": "^16.4.7",
     "editorconfig-checker": "^6.0.1",
     "eslint": "^9.18.0",
-    "html-minifier-terser": "^7.2.0",
+    "htmlnano": "^2.1.1",
     "linkedom": "^0.18.6",
     "postcss": "^8.4.49",
     "postcss-csso": "^6.0.1",
