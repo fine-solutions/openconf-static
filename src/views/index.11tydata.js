@@ -1,6 +1,7 @@
 export default {
   layout: 'base.njk',
   permalink: '/',
+  fullPageUrl: '/',
 
   eleventyComputed: {
     documentTitle: function (data) {

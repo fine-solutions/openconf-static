@@ -61,9 +61,7 @@
   <meta property="og:type" content="website">
 {% endif %}
 
-<meta property="og:image" content="{{ defaultOpenGraphPath }}">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="{{ defaultOpenGraphSiteName }}">
 
 <!-- 10.2 Twitter -->
 
@@ -73,62 +71,4 @@
 
 {% if documentDescription %}
   <meta property="twitter:description" content="{{ documentDescription }}">
-{% endif %}
-
-<meta property="twitter:image" content="{{ defaultOpenGraphPath }}">
-<meta property="twitter:site" content="{{ defaultTwitterAccount }}">
-
-<!-- 10.3 Microdata -->
-
-{% if categoryName %}
-  <meta property="article:tag" content="{{ categoryName }}">
-{% endif %}
-
-{% if articleTag %}
-  <meta property="article:tag" content="{{ articleTag }}">
-{% endif %}
-
-{% if pageType == 'Article' %}
-  <script type="application/ld+json">
-    {
-      "@context": "http:\/\/schema.org",
-      "@type": "Article",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ fullPageUrl }}"
-      },
-      "headline": "{{ documentTitle }}",
-      {% if cover %}
-      "image": [
-        "{{ baseUrl }}{{ cover.desktop if cover.desktop }}"
-        {% if cover.mobile %},{% endif %}
-        "{{ baseUrl }}{{ cover.mobile if cover.mobile }}"
-      ],
-      {% endif %}
-      "datePublished": "{{ createdAt }}",
-      "dateModified": "{{ updatedAt }}",
-      "author": "{{ defaultOpenGraphAuthor }}",
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ defaultOpenGraphSiteName }}",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ baseUrl }}/images/publisher-logo.svg"
-        }
-      },
-      "description": "{{ doc.data.description }}",
-      "url": "{{ fullPageUrl }}"
-    }
-  </script>
-  <meta property="article:section" content="{{ defaultOpenGraphArticleSection }}">
-{% endif %}
-
-{% if pageType == 'Article' %}
-  {% if previousArticle %}
-    <link rel="prev" href="{{ baseUrl }}{{ previousArticle.link }}">
-  {% endif %}
-
-  {% if nextArticle %}
-    <link rel="next" href="{{ baseUrl }}{{ nextArticle.link }}">
-  {% endif %}
 {% endif %}

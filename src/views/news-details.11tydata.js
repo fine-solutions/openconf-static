@@ -8,6 +8,7 @@ export default {
   },
 
   permalink: '/news/{{ article.fileSlug }}/index.html',
+  fullPageUrl: '/news/{{ article.fileSlug }}/index.html',
 
   eleventyComputed: {
     documentTitle: function (data) {

@@ -8,6 +8,7 @@ export default {
     },
 
     permalink: '/accommodation/{{ accommodation.fileSlug }}/index.html',
+    fullPageUrl: '/accommodation/{{ accommodation.fileSlug }}/index.html',
 
   eleventyComputed: {
     documentTitle: function (data) {
