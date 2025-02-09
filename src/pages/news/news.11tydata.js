@@ -11,7 +11,7 @@ export default {
     },
 
     documentTitle: function (data) {
-      return `Конференция RLNC*2025 | Новости | ${data.title}`
+      return `RLNC*2025 | Новости | ${data.title}`
     },
 
     documentDescription: function (data) {
