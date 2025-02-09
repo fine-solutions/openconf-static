@@ -1,5 +1,5 @@
-{% from "blocks/header.njk" import header with context %}
-{% from "blocks/footer.njk" import footer with context %}
+{% from 'blocks/header.njk' import header with context %}
+{% from 'blocks/footer.njk' import footer with context %}
 
 <!DOCTYPE html>
 <html class="base" lang="en">
@@ -10,6 +10,5 @@
     {{ header('base__header') }}
     {{ content | safe }}
     {{ footer('base__footer') }}
-    <script src="/scripts/index.js" {% if env.isDevEnv %}type="module"{% endif %}></script>
   </body>
 </html>
