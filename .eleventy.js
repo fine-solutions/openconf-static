@@ -1,10 +1,10 @@
 export default async function(config) {
   const modules = await Promise.all([
     import('./.eleventy/collections.js'),
-    import('./.eleventy/transforms.js'),
+    import('./.eleventy/extensions.js'),
     import('./.eleventy/shortcodes.js'),
     import('./.eleventy/static-files.js'),
-    import('./.eleventy/extensions.js'),
+    import('./.eleventy/transforms.js'),
   ])
 
   modules.forEach(module => module.default(config))
@@ -21,7 +21,6 @@ export default async function(config) {
     dataTemplateEngine: 'njk',
     markdownTemplateEngine: false,
     htmlTemplateEngine: 'njk',
-    passthroughFileCopy: true,
     templateFormats: ['md', 'njk'],
   }
 }
