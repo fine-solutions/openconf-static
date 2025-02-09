@@ -6,7 +6,7 @@ const env = process.env.NODE_ENV || ENVS.PRODUCTION
 const isProdEnv = env === ENVS.PRODUCTION
 const isDevEnv = !isProdEnv
 
-export default Object.freeze({
+export default {
   isProdEnv,
   isDevEnv,
-})
+}
