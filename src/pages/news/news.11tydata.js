@@ -31,7 +31,7 @@ export default {
       ]
     },
 
-    tags: function (data) {
+    newsTags: function (data) {
       return data.collections.tags.filter((t) => data.tags.includes(t.url))
     },
 

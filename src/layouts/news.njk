@@ -9,7 +9,7 @@ layout: base.njk
   <section id="details" class="news-details__section news-details__section--details">
     {{ content | safe }}
      <div class="news-details__tag-list">
-      {% for t in tags %}
+      {% for t in newsTags %}
         {{ tag('news-details__tag', t, true)}}
       {% endfor %}
     </div>
