@@ -31,10 +31,15 @@ export default async function(config) {
     viteOptions: {
       clearScreen: false,
       appType: 'mpa',
+      liveReload: true,
 
       server: {
         mode: 'development',
         middlewareMode: true,
+      },
+
+      build: {
+        mode: "production",
       },
 
       cacheDir: '.vite',
@@ -56,6 +61,7 @@ export default async function(config) {
         alias: {
           '/styles': path.resolve('.', 'src/styles'),
           '/scripts': path.resolve('.', 'src/scripts'),
+          scripts: path.resolve('.', 'src/scripts'),
         },
       },
     },
