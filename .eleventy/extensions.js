@@ -5,7 +5,6 @@ const isProdMode = process.env.NODE_ENV === 'production'
 
 export default async function(eleventyConfig) {
   eleventyConfig.ignores.add('src/**/!(styles)/*.css')
-  eleventyConfig.ignores.add('src/styles/fonts.css')
 
   eleventyConfig.addPlugin(cssExtension, {
     lightningcss: {
