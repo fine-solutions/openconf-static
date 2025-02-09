@@ -28,16 +28,16 @@ function getUpdatedTime(time) {
     value = Math.ceil(diff / (60*60*24))
     word = getNumberWords(value, ['день', 'дня', 'дней'])
     return `${value} ${word} назад`
-  } else if (diff < 60*60*24*7*30) {
+  } else if (diff < 60*60*24*30) {
     value = Math.ceil(diff / (60*60*24*7))
     word = getNumberWords(value, ['неделя', 'недели', 'недель'])
     return `${value} ${word} назад`
-  } else if (diff < 60*60*24*7*30*12) {
-    value = Math.ceil(diff / (60*60*24*7*30))
+  } else if (diff < 60*60*24*30*12) {
+    value = Math.ceil(diff / (60*60*24*30))
     word = getNumberWords(value, ['месяц', 'месяца', 'месяцев'])
     return `${value} ${word} назад`
-  } else if (diff > 60*60*24*7*365) {
-    value = Math.ceil(diff / (60*60*24*7*365))
+  } else if (diff > 60*60*24*365) {
+    value = Math.ceil(diff / (60*60*24*365))
     word = getNumberWords(value, ['год', 'года', 'лет'])
     return `${value} ${word} назад`
   }
