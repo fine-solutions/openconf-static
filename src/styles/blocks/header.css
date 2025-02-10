@@ -8,6 +8,7 @@
   top: 0px;
   padding: 0px 10px;
   background-color: hsl(var(--color-background));
+  z-index: 1;
 }
 
 .header__first-line {
