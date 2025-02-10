@@ -1,0 +1,12 @@
+{% from "blocks/accommodation-article.njk" import accommodation with context %}
+
+<main class="news-details">
+  {% if accommodations and accommodations.length > 0 %}
+    <section id="accommodation" class="index__section index__section--accommodation">
+      <h1 class="index__heading title">Варианты размещения</h1>
+      {% for item in accommodations %}
+        {{ accommodation('index__accommodation', item) }}
+      {% endfor %}
+    </section>
+  {% endif %}
+</main>
