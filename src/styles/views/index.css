@@ -147,11 +147,18 @@
   .index__section--calendar {
     grid-column-start: 2;
     grid-column-end: 3;
+    position: sticky;
+    top: 58px;
+    height: 319px;
+    background-color: hsl(var(--color-background));
   }
 
   .index__section--documents {
     grid-column-start: 2;
     grid-column-end: 3;
+    position: sticky;
+    top: calc(58px + 319px + 10px);
+    background-color: hsl(var(--color-background));
   }
 
   .index__section--news {
