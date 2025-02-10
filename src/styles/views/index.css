@@ -158,6 +158,7 @@
     grid-column-end: 3;
     position: sticky;
     top: 58px;
+    height: 329px;
     background-color: hsl(var(--color-background));
   }
 
