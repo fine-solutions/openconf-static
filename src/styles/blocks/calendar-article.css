@@ -1,19 +1,15 @@
 .calendar-article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   position: relative;
+  border-left: 4px solid hsl(var(--color-disabled));
+  padding-left: 10px;
+  margin-left: -16px;
 }
 
-.calendar-article::before {
-  content: "";
-  width: 4px;
-  height: 100%;
-  background-color: hsl(var(--color-disabled));
-  position: absolute;
-  left: -10px;
-  top: 0px;
-}
-
-.calendar-article--active::before {
-  background-color: hsl(var(--color-blue-accent))
+.calendar-article--active {
+  border-left-color: hsl(var(--color-blue-accent))
 }
 
 .calendar-article__title {
@@ -21,4 +17,5 @@
 }
 .calendar-article__text {
   line-height: 14px;
+  margin: 0;
 }
