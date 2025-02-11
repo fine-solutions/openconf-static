@@ -62,7 +62,7 @@ export default async function(eleventyConfig) {
           window.document.querySelector("link[href='/fonts/Roboto/Roboto-Regular.woff2']").remove()
         }
         if (!isStrongExists) {
-          window.document.querySelector("link[href='/fonts/Roboto/Roboto-Semibold.woff2']").remove()
+          window.document.querySelector("link[href='/fonts/Roboto/Roboto-SemiBold.woff2']").remove()
         }
       }
 
