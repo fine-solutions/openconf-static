@@ -30,9 +30,9 @@
   fill: var(--color-icon);
 }
 
-.header__button--menu {
+/* .header__button--menu {
 
-}
+} */
 
 @media (min-width: 830px) {
   .header__button--menu {
@@ -40,9 +40,9 @@
   }
 }
 
-.header__button--profile {
+/* .header__button--profile {
 
-}
+} */
 
 .header__menu {
   display: flex;
@@ -68,13 +68,13 @@
   }
 }
 
-.header__menu {
+/* .header__menu {
 
 }
 
 .header__menu-item {
 
-}
+} */
 
 .header__menu-link {
   text-decoration: none;
