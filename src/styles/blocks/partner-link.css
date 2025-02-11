@@ -4,4 +4,5 @@
 
 .partner-link__image {
   width: 100%;
+  max-width: 270px;
 }
