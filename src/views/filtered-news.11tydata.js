@@ -50,8 +50,8 @@ export default {
       const { tagInfo } = data
       const { news } = data.collections
       return news
-        .filter((n) => {
-          return n.data.tags.filter((t) => t.url === tagInfo.url).length > 0
+        .filter(async (n) => {
+          return await n.data.tags.filter((t) => t.url === tagInfo.url).length > 0
         })
     },
   },
