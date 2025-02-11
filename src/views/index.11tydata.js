@@ -185,8 +185,8 @@ export default {
           image: '/images/partners/vsu.svg',
         },
         {
-          title: 'Перейти на официальный сайт проекта «Передовые инженерные школы»',
-          url: 'https://engineers2030.ru',
+          title: 'Передовая инженерная школа «Российская электроника, инфокоммуникации и радиосвязь»',
+          url: 'https://www.vsu.ru/engineers/',
           image: '/images/partners/saes.svg',
         },
         {
