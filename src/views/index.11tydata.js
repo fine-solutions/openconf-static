@@ -89,6 +89,13 @@ export default {
           isActive: true,
         },
         {
+          label: 'Согласие на обработку ПД',
+          type: 'doc',
+          url: '/docs/2025/agreement.doc',
+          title: 'Согласие на обработку персональных данных в формате DOC',
+          isActive: true,
+        },
+        {
           label: 'Программа',
           type: 'pdf',
           url: '',
