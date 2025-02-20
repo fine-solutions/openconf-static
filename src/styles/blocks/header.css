@@ -30,6 +30,10 @@
   fill: var(--color-icon);
 }
 
+.header__action {
+  display: none;
+}
+
 /* .header__button--menu {
 
 } */
@@ -37,6 +41,17 @@
 @media (min-width: 830px) {
   .header__button--menu {
     display: none;
+  }
+
+  .header__action {
+    display: inline-flex;
+    padding: 10px 20px;
+    background-color:  hsl(var(--color-background));
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(var(--color-text));
+    border: 1px solid hsl(var(--color-primary));
   }
 }
 

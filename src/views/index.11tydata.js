@@ -25,12 +25,11 @@ export default {
     },
 
     actionInfo: function () {
-      return false
-      // return {
-      //   label: 'Подать доклад',
-      //   url: 'https://my.rlnc.ru',
-      //   title: 'Нажав эту кнопку Вы попадёте в личный кабинет, где сможете подать доклад на конференцию',
-      // }
+      return {
+        label: 'Подать доклад',
+        url: 'https://my.rlnc.ru',
+        title: 'Нажав эту кнопку Вы попадёте в личный кабинет, где сможете подать доклад на конференцию',
+      }
     },
 
     mainImage: function () {
