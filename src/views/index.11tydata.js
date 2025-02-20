@@ -119,11 +119,12 @@ export default {
     },
 
     newsList: function (data) {
-      return data.collections.news
-        .sort((a, b) => {
-          const aDate = new Date(a.data.updated)
-          const bDate = new Date(b.data.updated)
-          return bDate - aDate
+      const { tags } = data.collections
+      const { news } = data.collections
+      return news
+        .map((n) => {
+          n.data.tags = n.data.tags.map((t) => tags.filter((s) => s.url === t)[0])
+          return n
         })
     },
 

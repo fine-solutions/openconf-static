@@ -38,21 +38,5 @@ export default {
     newsTags: function (data) {
       return data.collections.tags.filter((t) => data.tags.includes(t.url))
     },
-
-    newsList: function (data) {
-      const { tags } = data.collections
-      const { news } = data.collections
-      return news
-        .map((n) => {
-          n.data.tags = n.data.tags.map((t) => {
-            return {
-              url: t,
-              label: tags.filter((s) => s.url === t)[0]?.label,
-              title: tags.filter((s) => s.url === t)[0]?.title,
-            }
-          })
-          return n
-        })
-    },
   },
 }
