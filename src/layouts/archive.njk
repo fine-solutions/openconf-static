@@ -1,0 +1,32 @@
+---
+layout: base.njk
+---
+
+{% from "blocks/archive-list.njk" import archive with context %}
+{% from "blocks/document-list.njk" import document with context %}
+{# {% from "blocks/slider.njk" import slider with context %} #}
+
+<main class="conference">
+  <section class="conference__section conference__section--about">
+    {{ content | safe }}
+  </section>
+
+  {% if documentsList and documentsList.length > 0 %}
+    <section class="conference__section conference__section--documents">
+      <h2 class="conference__heading title">Документы конференции</h2>
+      {{ document('index__document', documentsList) }}
+    </section>
+  {% endif %}
+
+  <section class="conference__section conference__section--slider">
+    <h2 class="conference__heading title">Фотографии с конференции</h2>
+    {# {{ slider('conference__slider', images) }} #}
+  </section>
+
+  {% if archive and archive.length > 0 %}
+    <section id="archive" class="conference__section conference__section--archive">
+      <h2 class="conference__heading title">Прошедшие конференции</h2>
+      {{ archive('conference__archive', archive) }}
+    </section>
+  {% endif %}
+</main>
