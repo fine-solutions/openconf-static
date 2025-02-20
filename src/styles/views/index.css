@@ -210,8 +210,8 @@
 
   .index__partners {
     display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    grid-template-columns: repeat(3, auto);
   }
 
   .index__section--accommodation {
