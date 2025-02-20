@@ -120,6 +120,11 @@ export default {
 
     newsList: function (data) {
       return data.collections.news
+        .sort((a, b) => {
+          const aDate = new Date(a.data.updated)
+          const bDate = new Date(b.data.updated)
+          return bDate - aDate
+        })
     },
 
     sections: function () {
