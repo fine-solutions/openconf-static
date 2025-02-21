@@ -111,5 +111,9 @@ export default {
         },
       ]
     },
+
+    images: function () {
+      return undefined
+    }
   },
 }
