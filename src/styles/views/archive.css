@@ -10,6 +10,20 @@
   flex-direction: column;
 }
 
+.conference__file-list {
+  display: none;
+}
+
+@media (min-width: 512px) {
+  .conference__document-list {
+    display: none;
+  }
+
+  .conference__file-list {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
   .conference {
     grid-template-columns: auto clamp(264px, 30%, 364px);
