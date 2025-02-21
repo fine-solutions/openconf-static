@@ -24,10 +24,12 @@ layout: base.njk
     </section>
   {% endif %}
 
-  <section class="conference__section conference__section--slider">
-    <h2 class="conference__heading title">Фотографии с конференции</h2>
-    {# {{ slider('conference__slider', images) }} #}
-  </section>
+  {% if images and images.length > 0 %}
+    <section class="conference__section conference__section--slider">
+      <h2 class="conference__heading title">Фотографии с конференции</h2>
+      {# {{ slider('conference__slider', images) }} #}
+    </section>
+  {% endif %}
 
   {% if archive and archive.length > 0 %}
     <section id="archive" class="conference__section conference__section--archive">
