@@ -42,31 +42,31 @@ layout: base.njk
 
   <section class="accommodation__section accommodation__section--aside">
     <p class="accommodation__contact text">
-      <span class="strong">До места проведения:</span> {{ data.arrival }}
+      <span class="strong">До места проведения:</span> {{ arrival }}
     </p>
     <p class="accommodation__contact text">
-      <span class="strong">Цена:</span> {{ data.price }}
+      <span class="strong">Цена:</span> {{ price }}
     </p>
     <p class="accommodation__contact text">
       <span class="strong">Телефоны:</span>
-      {% for p in data.phone %}
+      {% for p in phone %}
         <br><a class="accommodation__link" href="{{ p.url }}">{{ p.label }}</a>
       {% endfor %}
     </p>
     <p class="accommodation__contact text">
       <span class="strong">Электронная почта:</span>
-      {% for e in data.email %}
+      {% for e in email %}
         <br><a class="accommodation__link" href="{{ e.url }}">{{ e.label }}</a>
       {% endfor %}
     </p>
     <p class="accommodation__contact text">
       <span class="strong">Адрес:</span>
-      {% for a in data.address %}
+      {% for a in address %}
         <br><a class="accommodation__link" href="{{ a.url }}">{{ a.label }}</a>
       {% endfor %}
     </p>
     <p class="accommodation__contact text">
-      <span class="strong">До места проведения:</span> {{ data.promo }}
+      <span class="strong">Скидки:</span> {{ promo }}
     </p>
   </section>
 </main>
