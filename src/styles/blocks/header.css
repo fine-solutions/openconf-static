@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: start;
   top: 0px;
-  padding: 0px 10px 20px;
+  padding: 0px 10px 10px;
   background-color: hsl(var(--color-background));
   z-index: 2;
 }
@@ -101,7 +101,7 @@
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  padding: 0px 12px;
+  padding: 0px 12px 10px;
 }
 
 .header__breadcrumbs {
