@@ -24,14 +24,6 @@ export default {
       return undefined
     },
 
-    actionInfo: function () {
-      return {
-        label: 'Подать доклад',
-        url: 'https://my.rlnc.ru',
-        title: 'Нажав эту кнопку Вы попадёте в личный кабинет, где сможете подать доклад на конференцию',
-      }
-    },
-
     mainImage: function () {
       return {
         url: '/images/index/chip',

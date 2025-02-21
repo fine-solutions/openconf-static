@@ -53,11 +53,9 @@
       <p class="index__location">
         {{ documentLocation | safe }}
       </p>
-      {% if actionInfo %}
-        <a class="index__action" href="{{ actionInfo.url }}" title="{{ actionInfo.title }}">
-          {{ actionInfo.label }}
-        </a>
-      {% endif %}
+      <a class="index__action" href="https://my.rlnc.ru" title="Нажав эту кнопку Вы попадёте в личный кабинет, где сможете подать доклад на конференцию">
+        Подать доклад
+      </a>
     <div>
   </section>
   {% if featuredPapers and featuredPapers.length > 0 %}
