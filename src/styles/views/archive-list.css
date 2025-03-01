@@ -1,0 +1,30 @@
+.archive-page {
+  display: grid;
+}
+
+.archive-page__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 20px 25px;
+}
+
+.archive-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.archive-page__link {
+  margin: 0;
+  padding: 0;
+  color: hsl(var(--color-text));
+}
+
+.archive-page__link:hover {
+  color: hsl(var(--color-even));
+}
