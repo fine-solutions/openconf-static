@@ -1,0 +1,18 @@
+{% from "blocks/news-article.njk" import news with context %}
+
+<main class="archive-page">
+  {% if archiveList and archiveList.length > 0 %}
+    <section class="archive-page__section archive-page__section--page">
+      <h1 class="archive-page__heading title">Архив прошедших конференций</h1>
+      <ul class="archive-page__list">
+      {% for item in archiveList %}
+        <li class="archive-page__item">
+          <a href="{{ item.fileSlug }}" class="archive-page__link">
+            {{ item.data.summary }} (RLNC * {{ item.fileSlug }})
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</main>

@@ -6,24 +6,24 @@ layout: base.njk
 {% from "blocks/document-list.njk" import document with context %}
 {% from "blocks/file-list.njk" import file with context %}
 
-<main class="conference">
-  <section class="conference__section conference__section--about">
+<main class="archive">
+  <section class="archive__section archive__section--about">
     {{ content | safe }}
   </section>
 
   {% if fileList %}
-    <section class="conference__section conference__section--documents">
-      <h2 class="conference__heading title">Файлы конференции</h2>
-      <div class="conference__file-list">
-        {{ file('conference__file', fileList) }}
+    <section class="archive__section archive__section--documents">
+      <h2 class="archive__heading title">Файлы конференции</h2>
+      <div class="archive__file-list">
+        {{ file('archive__file', fileList) }}
       </div>
     </section>
   {% endif %}
 
   {% if archive and archive.length > 0 %}
-    <section id="archive" class="conference__section conference__section--archive">
-      <h2 class="conference__heading title">Прошедшие конференции</h2>
-      {{ archive('conference__archive', archive) }}
+    <section id="archive" class="archive__section archive__section--archive">
+      <h2 class="archive__heading title">Прошедшие конференции</h2>
+      {{ archive('archive__archive', archive) }}
     </section>
   {% endif %}
 </main>
