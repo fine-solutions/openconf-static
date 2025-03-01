@@ -5,29 +5,18 @@ layout: base.njk
 {% from "blocks/archive-list.njk" import archive with context %}
 {% from "blocks/document-list.njk" import document with context %}
 {% from "blocks/file-list.njk" import file with context %}
-{# {% from "blocks/slider.njk" import slider with context %} #}
 
 <main class="conference">
   <section class="conference__section conference__section--about">
     {{ content | safe }}
   </section>
 
-  {% if documentsList and documentsList.length > 0 %}
+  {% if fileList %}
     <section class="conference__section conference__section--documents">
-      <h2 class="conference__heading title">Документы конференции</h2>
-      <div class="conference__document-list">
-        {{ document('conference__document', documentsList) }}
-      </div>
+      <h2 class="conference__heading title">Файлы конференции</h2>
       <div class="conference__file-list">
-        {{ file('conference__document', documentsList) }}
+        {{ file('conference__file', fileList) }}
       </div>
-    </section>
-  {% endif %}
-
-  {% if images and images.length > 0 %}
-    <section class="conference__section conference__section--slider">
-      <h2 class="conference__heading title">Фотографии с конференции</h2>
-      {# {{ slider('conference__slider', images) }} #}
     </section>
   {% endif %}
 

@@ -11,42 +11,7 @@
 }
 
 .conference__file-list {
-  display: none;
-}
-
-@media (min-width: 512px) {
-  .conference__document-list {
-    display: none;
-  }
-
-  .conference__file-list {
-    display: block;
-  }
-}
-
-@media (min-width: 768px) {
-  .conference {
-    grid-template-columns: auto clamp(264px, 30%, 364px);
-  }
-
-  .conference__section--about {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
-  .conference__section--documents {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-  }l
-  .conference__section--slider {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
-  .conference__section--archive {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
