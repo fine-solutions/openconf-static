@@ -26,7 +26,9 @@
               </g>
             </svg>
           {% endif %}
-          {{ item.label }}
+          <span class="file-list__link-label">
+            {{ item.label }}
+          </span>
         </a>
       </li>
     {% endfor %}
