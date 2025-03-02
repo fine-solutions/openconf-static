@@ -19,6 +19,15 @@ export default async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy(`src/images/${folder}`)
   })
 
+  // Docs from archive
+  constants.archiveYears.forEach((y) => {
+    const docsKey = `src/pages/archive/${y}/docs/*.pdf`
+    const docsSetting = {}
+    docsSetting[docsKey] = `docs/${y}`
+    eleventyConfig.addPassthroughCopy(docsSetting)
+  })
+
+
   // Other files
   eleventyConfig.addPassthroughCopy('src/docs/**/*')
   eleventyConfig.addPassthroughCopy('src/manifest.json')

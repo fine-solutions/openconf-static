@@ -121,10 +121,10 @@
       {% endfor %}
     </section>
   {% endif %}
-  {% if archive and archive.length > 0 %}
+  {% if archiveList and archiveList.length > 0 %}
     <section id="archive" class="index__section index__section--archive">
       <h2 class="index__heading title">Архив</h2>
-      {{ archive('index__archive', archive) }}
+      {{ archive('index__archive', archiveList) }}
     </section>
   {% endif %}
 </main>

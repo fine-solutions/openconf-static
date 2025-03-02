@@ -18,8 +18,12 @@
 @import url('./blocks/accommodation-article.css');
 @import url('./blocks/archive-list.css');
 @import url('./blocks/partner-link.css');
+@import url('./blocks/file-list.css');
 
 /* Views */
 @import url('./views/index.css');
 @import url('./views/news-details.css');
+@import url('./views/news-list.css');
+@import url('./views/archive-list.css');
 @import url(./views/accommodation.css);
+@import url(./views/archive.css);

@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+
+{% from "blocks/archive-list.njk" import archive with context %}
+{% from "blocks/document-list.njk" import document with context %}
+{% from "blocks/file-list.njk" import file with context %}
+
+<main class="archive">
+  <section class="archive__section archive__section--about">
+    {{ content | safe }}
+  </section>
+
+  {% if fileList %}
+    <section class="archive__section archive__section--documents">
+      <h2 class="archive__heading title">Файлы конференции</h2>
+      <div class="archive__file-list">
+        {{ file('archive__file', fileList) }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if archiveList and archiveList.length > 0 %}
+    <section id="archive" class="archive__section archive__section--archive">
+      <h2 class="archive__heading title">Прошедшие конференции</h2>
+      {{ archive('archive__archive', archiveList) }}
+    </section>
+  {% endif %}
+</main>

@@ -214,16 +214,15 @@ export default {
       })
     },
 
-    archive: function () {
-      return undefined
-      // return data.constants.archiveYears
-      //   .map((y, i) => {
-      //     return {
-      //       url: `/archive/${y}`,
-      //       label: data.constants.currentNumber - data.constants.archiveYears.length + i,
-      //     }
-      //   })
-      //   .sort((a, b) => b.label - a.label)
+    archiveList: function (data) {
+      return data.constants.archiveYears
+        .map((y, i) => {
+          return {
+            url: `/archive/${y}`,
+            label: data.constants.currentNumber - data.constants.archiveYears.length + i,
+          }
+        })
+        .sort((a, b) => b.label - a.label)
     }
   },
 }

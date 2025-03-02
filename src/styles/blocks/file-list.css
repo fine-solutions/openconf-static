@@ -1,0 +1,29 @@
+.file-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.file-list__item {
+  width: 150px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.file-list__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  text-decoration: none;
+  color: hsl(var(--color-text));
+}
+
+.file__icon-path {
+  fill: hsl(var(--color-text));
+}

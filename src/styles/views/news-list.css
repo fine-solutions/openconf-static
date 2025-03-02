@@ -1,0 +1,37 @@
+.news-list {
+  display: grid;
+}
+
+.news-list__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 20px 25px;
+}
+
+/* .news-list__section--list {
+
+} */
+
+.news-list__section--list * {
+  margin: 0.5em;
+}
+/*
+.news-list__section--list {
+
+}
+
+.news-list__heading {
+
+}
+
+.news-list__news {
+
+} */
+
+@media (min-width: 640px) {
+  .news-list {
+    grid-template-columns: auto clamp(264px, 30%, 364px);
+  }
+}
