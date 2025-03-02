@@ -20,10 +20,10 @@ layout: base.njk
     </section>
   {% endif %}
 
-  {% if archive and archive.length > 0 %}
+  {% if archiveList and archiveList.length > 0 %}
     <section id="archive" class="archive__section archive__section--archive">
       <h2 class="archive__heading title">Прошедшие конференции</h2>
-      {{ archive('archive__archive', archive) }}
+      {{ archive('archive__archive', archiveList) }}
     </section>
   {% endif %}
 </main>
