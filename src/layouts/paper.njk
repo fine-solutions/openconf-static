@@ -1,0 +1,54 @@
+---
+layout: base.njk
+---
+
+{% from "blocks/speaker-article.njk" import speaker with context %}
+{% from "blocks/document-list.njk" import document with context %}
+
+<main class="paper">
+  {% if videoItem  %}
+    <section class="paper__section paper__section--presentations">
+      <div class="paper__video-wrapper">
+        <video class="paper__video" controls poster="{{ videoItem.poster }}">
+          {# <source src="{{ videoItem.src }}.webm" type="video/webm"> #}
+          {# <source src="{{ videoItem.src }}.mp4" type="video/mp4"> #}
+          <p class="paper__video-text text">
+            Ваш браузер не поддерживает данное видео.
+          </p>
+        </video>
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="paper__section paper__section--information">
+    <h1 class="paper__title title">
+      {{ title }}
+    </h1>
+    <p class="paper__speaker caption">
+      {{ speaker_name }}
+    </p>
+    <p class="paper__location text">
+      {{ location }}
+    </p>
+  </section>
+
+  <section class="paper__section paper__section--annotations">
+    {{ content | safe }}
+  </section>
+
+  {% if speakersList and speakersList.length > 0 %}
+    <section class="paper__section paper__section--speakers">
+      <h2 class="paper__heading title">Докладчик</h2>
+      {% for item in speakersList %}
+        {{ speaker('paper__speaker', item) }}
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if documentsList and documentsList.length > 0 %}
+    <section class="paper__section paper__section--documents">
+      <h2 class="paper__heading title">Материалы</h2>
+      {{ document('paper__document', documentsList) }}
+    </section>
+  {% endif %}
+</main>
