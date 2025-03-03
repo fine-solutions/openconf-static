@@ -1,0 +1,53 @@
+---
+layout: base.njk
+---
+
+{% from "blocks/featured-article.njk" import featured with context %}
+
+<main class="speaker">
+  <section class="speaker__section speaker__section--image">
+    <div class="speaker__image">
+      <picture>
+        <source
+          srcset="
+            {{ image }}.avif 1x,
+            {{ image }}@2x.avif 2x,
+            {{ image }}@3x.avif 3x
+          "
+          type="image/avif"
+        >
+        <source
+          srcset="
+            {{ image }}.webp 1x,
+            {{ image }}@2x.webp 2x,
+            {{ image }}@3x.webp 3x
+          "
+          type="image/webp"
+        >
+        <source
+          srcset="
+            {{ image }}.jpg 1x,
+            {{ image }}@2x.jpg 2x,
+            {{ image }}@3x.jpg 3x
+          "
+          type="image/jpeg"
+        >
+        <img class="speaker__image speaker__image--w140" src="{{ image }}@3x.webp" alt="{{ lable }}">
+      </picture>
+    </div>
+  </section>
+
+  <section class="speaker__section speaker__section--speaker">
+    <h2 class="speaker__heading speaker__heading--center title">{{ title }}</h2>
+    {{ content | safe }}
+  </section>
+
+  {% if papersList and papersList.length > 0 %}
+    <section class="speaker__section speaker__section--papers">
+      <h2 class="speaker__heading title">Доклады</h2>
+      {% for item in papersList %}
+        {{ featured('speaker__papers-item', item) }}
+      {% endfor %}
+    </section>
+  {% endif %}
+</main>
