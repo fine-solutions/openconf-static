@@ -10,15 +10,14 @@
   padding: 20px;
 }
 
-.speaker__profile {
-  display: grid;
-  gap:20px;
+.speaker__section--image {
+  padding-bottom: 0px;
 }
 
 .speaker__image {
   overflow: hidden;
   width: 100%;
-  height: 140px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,37 +32,18 @@
   min-width: 140px;
 }
 
-.speaker__picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.speaker__name {
-  text-align: center;
-  margin: 0;
-}
-
-.speaker__position {
-  margin: 0;
-}
-
 .speaker__heading {
   margin: 0;
   padding-bottom: 15px;
 }
 
-.speaker__reports {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap:10px;
-  overflow: hidden;
+.speaker__heading--center {
+  text-align: center;
+  padding-bottom: 0px;
 }
 
-
 @media (min-width: 320px) {
-  .speaker__reports .banner-article {
+  .speaker__section--papers .featured-article {
     --line-count: 5;
     --multiplicator: 0.6;
     height: 37.5vw;
@@ -71,14 +51,13 @@
     max-width: 310px;
   }
 
-  .speaker__reports .banner-article__aside {
-    width: 68.75vw;
+  .speaker__section--papers .featured-article__aside {
+    width: 58vw;
     padding: 10px;
-    padding-left: 0;
     background-color: hsl(var(--color-background));
   }
 
-  .speaker__reports .banner-article__image {
+  .speaker__section--papers .featured-article__image {
     height: 100%;
     max-width: 100px;
     object-fit: cover;
@@ -91,52 +70,36 @@
     grid-template-columns: auto clamp(264px, 30%, 364px);
   }
 
-  .speaker__section--breadcrumbs {
-    grid-column-start: 1;
+  .speaker__section--papers .featured-article__aside {
+    width:  68.75vw;
+  }
+  .speaker__heading--center {
+    text-align: start;
+  }
+
+  .speaker__section--image {
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
+    padding: 45px 35px 20px;
+  }
+
+  .speaker__image {
+    justify-content: start;
+    align-items: start;
   }
 
   .speaker__section--speaker {
     grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
     padding: 45px 35px 20px;
   }
 
-  .speaker__section--reports {
+  .speaker__section--papers {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 3;
+    grid-row-start: 2;
     padding: 0px 35px 45px;
-  }
-
-  .speaker__profile {
-    grid-template-columns: auto clamp(264px, 30%, 364px);
-    gap:0px;
-  }
-
-  .speaker__image {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    align-items: end;
-    justify-content: start;
-  }
-
-  .speaker__name {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    text-align: start;
-    margin: 0p;
-  }
-
-  .speaker__position {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    width: 50.75vw;
   }
 }
