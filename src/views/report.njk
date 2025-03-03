@@ -1,0 +1,55 @@
+{% from "blocks/speaker-article.njk" import speaker with context %}
+{% from "blocks/document-list.njk" import document with context %}
+{% from "blocks/breadcrumbs.njk" import breadcrumbs with context %}
+
+<main class="report">
+  <div class="report__section report__section--breadcrumbs">
+     {{ breadcrumbs('report__breadcrumbs', breadcrumbsItems) }}
+  </div>
+  <section class="report__section report__section--presentations">
+    <div class="report__video-wrapper">
+      <video class="report__video" controls poster="{{ videoItem.poster }}">
+        <source src="{{ videoItem.video }}.webm" type="video/webm">
+        <source src="{{ videoItem.video }}.mp4" type="video/mp4">
+        <p class="report__video-text text">
+          Ваш браузер не поддерживает данное видео.
+        </p>
+      </video>
+    </div>
+  </section>
+
+  <section class="report__section report__section--information">
+    <article class="report__information">
+      <h1 class="report__title title">
+        {{ repotrItem.title }}
+      </h1>
+      <p class="report__name caption">
+        {{ repotrItem.name }}
+      </p>
+      <p class="report__location text">
+        {{ repotrItem.location }}
+      </p>
+    </article>
+  </section>
+
+  <section class="report__section report__section--annotations">
+    <h2 class="report__heading title">
+      Аннотация
+    </h2>
+    <p class="report__annotations text">
+      {{ repotrItem.annotation }}
+    </p>
+  </section>
+
+  <section class="report__section report__section--speakers">
+    <h2 class="report__heading title">Докладчик</h2>
+    {% for item in speakerItems %}
+      {{ speaker('report__speaker', item) }}
+    {% endfor %}
+  </section>
+
+  <section class="report__section report__section--documents">
+    <h2 class="report__heading title">Материалы</h2>
+    {{ document('report__document', documentItems) }}
+  </section>
+</main>
