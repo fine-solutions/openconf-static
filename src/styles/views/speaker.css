@@ -5,13 +5,16 @@
 .speaker__section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   margin: 0;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
+.speaker__section--image, .speaker__section--speaker {
+  padding-bottom: 20px;
+}
 .speaker__section--image {
-  padding-bottom: 0px;
+  padding-top: 40px;
 }
 
 .speaker__image {
@@ -34,13 +37,13 @@
 
 .speaker__heading {
   margin: 0;
-  padding-bottom: 15px;
 }
 
-.speaker__heading--center {
+.speaker__heading--align {
   text-align: center;
-  padding-bottom: 0px;
 }
+
+
 
 @media (min-width: 320px) {
   .speaker__section--papers .featured-article {
@@ -73,7 +76,7 @@
   .speaker__section--papers .featured-article__aside {
     width:  68.75vw;
   }
-  .speaker__heading--center {
+  .speaker__heading--align {
     text-align: start;
   }
 
@@ -81,7 +84,7 @@
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
-    padding: 45px 35px 20px;
+    padding: 45px 35px 0px;
   }
 
   .speaker__image {
@@ -93,13 +96,13 @@
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    padding: 45px 35px 20px;
+    padding: 45px 35px 0px;
   }
 
   .speaker__section--papers {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
-    padding: 0px 35px 45px;
+    padding: 0px 35px;
   }
 }
