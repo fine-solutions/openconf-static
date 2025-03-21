@@ -118,6 +118,7 @@ export default {
           n.data.tags = n.data.tags.map((t) => tags.filter((s) => s.url === t)[0])
           return n
         })
+        .sort((a, b) => new Date(b.data.updated) - new Date(a.data.updated))
     },
 
     sections: function () {
