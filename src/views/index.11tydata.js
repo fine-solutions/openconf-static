@@ -39,9 +39,9 @@ export default {
       const currentDate = new Date()
       return [
         {
-          title: '10 февраля — 24 марта',
+          title: '10 февраля — 31 марта',
           text: 'Прием и рецензирование докладов',
-          isActive: currentDate >= new Date('2025-02-10T00:00+02:00') && currentDate <= new Date('2025-03-24T00:00+02:00'),
+          isActive: currentDate >= new Date('2025-02-10T00:00+02:00') && currentDate <= new Date('2025-03-31T00:00+02:00'),
         },
         {
           title: '31 марта — 10 апреля',
