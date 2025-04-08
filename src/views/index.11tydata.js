@@ -89,7 +89,7 @@ export default {
         {
           label: 'Программа',
           type: 'pdf',
-          url: '',
+          url: '/docs/2025/rlnc-agenda.pdf',
           title: 'Программа в формате PDF',
           isActive: false,
         },
