@@ -91,7 +91,7 @@ export default {
           type: 'pdf',
           url: '/docs/2025/rlnc-agenda.pdf',
           title: 'Программа в формате PDF',
-          isActive: false,
+          isActive: true,
         },
         {
           label: 'Сборник трудов',
