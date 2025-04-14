@@ -233,14 +233,14 @@
 
 .index__list {
   display: grid;
-  gap: 5px;
+  gap: 10px;
   list-style: square;
   padding-left: 1em;
 }
 
-.index__item {
+/* .index__item {
 
-}
+} */
 
 .index__link {
   color: hsl(var(--color-text));
