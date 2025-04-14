@@ -41,18 +41,47 @@ export default {
         {
           title: '10 февраля — 31 марта',
           text: 'Прием и рецензирование докладов',
-          isActive: currentDate >= new Date('2025-02-10T00:00+02:00') && currentDate <= new Date('2025-03-31T00:00+02:00'),
+          isActive: currentDate >= new Date('2025-02-10T00:00+03:00') && currentDate <= new Date('2025-03-31T00:00+03:00'),
         },
         {
           title: '31 марта — 10 апреля',
           text: 'Регистрация участников',
-          isActive: currentDate >= new Date('2025-03-31T00:00+02:00') && currentDate <= new Date('2025-04-10T00:00+02:00'),
+          isActive: currentDate >= new Date('2025-03-31T00:00+03:00') && currentDate <= new Date('2025-04-10T00:00+03:00'),
         },
         {
           title: '15 апреля — 17 апреля',
           text: 'Работа секций конференции',
-          isActive: currentDate >= new Date('2025-04-15T00:00+02:00') && currentDate <= new Date('2025-04-17T00:00+02:00'),
+          isActive: currentDate >= new Date('2025-04-15T00:00+03:00') && currentDate <= new Date('2025-04-17T00:00+03:00'),
         }
+      ]
+    },
+
+    onlineStreams: function () {
+      return [
+        {
+          url: 'https://tc.main.vsu.ru/c/6613088286',
+          label: 'Пленарное заседание',
+        },
+        {
+          url: 'https://tc.main.vsu.ru/c/0155641640',
+          label: 'Заседание секций 1, 2',
+        },
+        {
+          url: 'https://tc.main.vsu.ru/c/7784013099',
+          label: 'Заседание секций 3, 4, 12',
+        },
+        {
+          url: 'https://tc.main.vsu.ru/c/7953417226',
+          label: 'Заседание секций 5, 6, 11',
+        },
+        {
+          url: 'https://tc.main.vsu.ru/c/6613088286',
+          label: 'Заседание секций 7, 8',
+        },
+        {
+          url: 'https://tc.main.vsu.ru/c/8204042211',
+          label: 'Заседание секций 9, 10',
+        },
       ]
     },
 

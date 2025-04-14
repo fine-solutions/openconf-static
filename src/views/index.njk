@@ -73,6 +73,20 @@
       {% endfor %}
     </section>
   {% endif %}
+  {% if onlineStreams and onlineStreams.length > 0 %}
+    <section id="streams" class="index__section index__section--streams">
+      <h2 class="index__heading title">Участие онлайн</h2>
+      <ul class="index__list">
+      {% for item in onlineStreams %}
+        <li class="index__item">
+          <a class="index__link" href="{{ item.url }}">
+            {{ item.label }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
   {% if documentItems and documentItems.length > 0 %}
     <section id="documents" class="index__section index__section--documents">
       <h2 class="index__heading title">Документы</h2>
