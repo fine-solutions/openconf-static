@@ -1,0 +1,25 @@
+
+<main class="not-found">
+  <section class="not-found__section">
+    <div class="not-found__code">
+      404
+    </div>
+
+    <p class="not-found__description">
+      Вы попали на страницу, которой не существует, либо зашли по неверному адресу.<br>
+      Предлагаем Вам перейти на другие страницы сайта:
+    </p>
+  </section>
+
+  {% if linksList and linksList.length > 0 %}
+    <section class="not-found__section">
+      <ul class="sections-list">
+        {% for item in linksList %}
+          <li class="sections-list__item strong">
+            <a class="sections-list__link strong" href="{{ item.url }}" title="{{ item.label }}">{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</main>
