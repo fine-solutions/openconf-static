@@ -170,6 +170,13 @@ export default {
           url: '',
           title: 'Лучшие доклады на секциях в формате PDF',
           isActive: false,
+        },
+        {
+          label: 'Коллекция фотографий',
+          type: 'link',
+          url: 'https://disk.yandex.ru/d/HRRWC0hKhgOTQQ',
+          title: 'Лучшие доклады на секциях в формате PDF',
+          isActive: true,
         }
       ]
     },
