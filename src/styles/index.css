@@ -25,5 +25,6 @@
 @import url('./views/news-details.css');
 @import url('./views/news-list.css');
 @import url('./views/archive-list.css');
-@import url(./views/accommodation.css);
-@import url(./views/archive.css);
+@import url('./views/accommodation-list.css');
+@import url('./views/accommodation.css');
+@import url('./views/archive.css');

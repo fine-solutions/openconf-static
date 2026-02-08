@@ -1,0 +1,33 @@
+.accommodation-list {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 0px 25px 25px;
+}
+
+.accommodation-list__section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .accommodation-list {
+    grid-template-columns: auto clamp(264px, 30%, 364px);
+    grid-template-rows: min-content auto;
+  }
+
+  .accommodation-list__banner {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .accommodation-list__section--hotel {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .accommodation-list__section--aside {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+}
