@@ -11,7 +11,7 @@ export default {
     },
 
     documentTitle: function (data) {
-      return `RLNC*2025 | Архив | ${data.title}`
+      return `RLNC*2026 | Архив | ${data.title}`
     },
 
     documentDescription: function (data) {
