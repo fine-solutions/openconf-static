@@ -102,6 +102,7 @@ export default {
           return n
         })
         .sort((a, b) => new Date(b.data.updated) - new Date(a.data.updated))
+        .slice(0, 4)
     },
 
     sections: function () {
