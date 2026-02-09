@@ -40,6 +40,10 @@ function getUpdatedTime(time) {
     value = Math.ceil(diff / (60*60*24*365))
     word = getNumberWords(value, ['год', 'года', 'лет'])
     return `${value} ${word} назад`
+  } else {
+    value = Math.floor(diff / (60*60*24*365))
+    word = getNumberWords(value, ['год', 'года', 'лет'])
+    return `${value} ${word} назад`
   }
 }
 
